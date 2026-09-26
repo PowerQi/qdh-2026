@@ -1,0 +1,881 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>千岛湖酒店 · 明豪同档 9 家横评</title>
+<style>
+:root{
+  --bg:#F7F6F3; --card:#FFFFFF; --ink:#1F1E1C; --ink2:#5F5E5A; --ink3:#8A8880;
+  --line:#E4E2DB; --line2:#CFCCC2;
+  --blue:#185FA5; --blue-bg:#E6F1FB; --blue-bd:#B5D4F4;
+  --green:#3B6D11; --green-bg:#EAF3DE; --green-bd:#C0DD97;
+  --amber:#854F0B; --amber-bg:#FAEEDA; --amber-bd:#FAC775;
+  --red:#A32D2D; --red-bg:#FCEBEB; --red-bd:#F7C1C1;
+  --purple:#534AB7; --purple-bg:#EEEDFE; --purple-bd:#AFA9EC;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);
+  font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;
+  font-size:15px;line-height:1.68;-webkit-font-smoothing:antialiased}
+.wrap{max-width:1080px;margin:0 auto;padding:44px 24px 90px}
+h1{font-size:28px;font-weight:600;margin:0 0 8px;letter-spacing:-.3px}
+h2{font-size:19px;font-weight:600;margin:0 0 6px}
+h3{font-size:16px;font-weight:600;margin:0 0 4px}
+h4{font-size:14px;font-weight:600;margin:0 0 4px}
+p{margin:0 0 10px}
+.sub{color:var(--ink2);font-size:14px;margin:0}
+.lede{color:var(--ink2);font-size:14px;margin:6px 0 0}
+section{margin-top:46px}
+.sec-head{border-bottom:2px solid var(--ink);padding-bottom:10px;margin-bottom:20px}
+.sec-head h2{margin:0 0 4px}
+.sec-head .lede{margin:0}
+.meta{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0 0}
+.chip{background:#fff;border:1px solid var(--line);border-radius:999px;
+  padding:4px 12px;font-size:13px;color:var(--ink2)}
+.chip b{color:var(--ink);font-weight:600}
+
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:20px 22px;margin-bottom:16px}
+.card.hero{border:2px solid var(--blue-bd)}
+.card.rival{border:2px solid var(--purple-bd)}
+.card.dim{background:#FCFBF9}
+.grid{display:grid;gap:16px}
+.g3{grid-template-columns:repeat(3,1fr)}
+.g2{grid-template-columns:repeat(2,1fr)}
+@media(max-width:860px){.g3,.g2{grid-template-columns:1fr}}
+
+.tag{display:inline-block;font-size:12px;padding:3px 10px;border-radius:999px;
+  background:#F1EFE8;color:var(--ink2);font-weight:500;margin-bottom:10px}
+.tag.best{background:var(--blue-bg);color:var(--blue)}
+.tag.val{background:var(--green-bg);color:var(--green)}
+.tag.warn{background:var(--amber-bg);color:var(--amber)}
+.tag.bad{background:var(--red-bg);color:var(--red)}
+.tag.new{background:var(--purple-bg);color:var(--purple)}
+
+.rank{font-size:12px;color:var(--ink3);letter-spacing:.06em;font-weight:600;margin-bottom:4px}
+.hname{font-size:17px;font-weight:600;margin:0 0 3px}
+.hscore{font-size:13px;color:var(--ink3);margin:0 0 12px}
+
+ul{margin:0 0 12px;padding-left:0;list-style:none}
+li{position:relative;padding-left:16px;margin-bottom:6px;font-size:14px;line-height:1.6}
+li::before{content:"";position:absolute;left:2px;top:.62em;width:5px;height:5px;
+  border-radius:50%;background:var(--line2)}
+li.hit::before{background:var(--green)}
+li.miss::before{background:var(--red)}
+li.mid::before{background:var(--amber)}
+li b{font-weight:600}
+ul.tight li{margin-bottom:4px}
+
+.kv{display:grid;grid-template-columns:70px 1fr;gap:4px 12px;font-size:13.5px;
+  border-top:1px solid var(--line);padding-top:12px;margin-top:12px}
+.kv dt{color:var(--ink3)}
+.kv dd{margin:0;color:var(--ink)}
+
+table{width:100%;border-collapse:collapse;font-size:13.5px;background:#fff;
+  border:1px solid var(--line);border-radius:12px;overflow:hidden}
+th,td{padding:11px 12px;text-align:left;border-bottom:1px solid var(--line);vertical-align:top}
+th{background:#F1EFE8;font-weight:600;font-size:13px;color:var(--ink2);white-space:nowrap}
+tr:last-child td{border-bottom:none}
+td.num{font-variant-numeric:tabular-nums;white-space:nowrap}
+td.c{text-align:center}
+.tbl-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch}
+tr.hi td{background:var(--blue-bg)}
+tr.hi2 td{background:var(--purple-bg)}
+tr.lo td{background:#FCFBF9;color:var(--ink2)}
+
+.note{background:var(--amber-bg);border:1px solid var(--amber-bd);border-radius:12px;
+  padding:16px 18px;font-size:14px;margin:16px 0}
+.note.red{background:var(--red-bg);border-color:var(--red-bd)}
+.note.green{background:var(--green-bg);border-color:var(--green-bd)}
+.note.blue{background:var(--blue-bg);border-color:var(--blue-bd)}
+.note.purple{background:var(--purple-bg);border-color:var(--purple-bd)}
+.note b{font-weight:600}
+.note p:last-child{margin-bottom:0}
+.note .t{font-weight:600;margin-bottom:6px;display:block}
+
+.price{font-variant-numeric:tabular-nums;font-weight:600}
+.p-low{color:var(--green)}
+.p-mid{color:var(--amber)}
+.p-high{color:var(--red)}
+
+.quote{border-left:3px solid var(--line2);padding:2px 0 2px 14px;margin:10px 0;
+  font-size:13.5px;color:var(--ink2);font-style:normal}
+.quote .src{display:block;font-size:12px;color:var(--ink3);margin-top:3px}
+
+.timeline{display:grid;grid-template-columns:repeat(5,1fr);gap:10px;margin-top:16px}
+@media(max-width:720px){.timeline{grid-template-columns:1fr}}
+.day{background:#fff;border:1px solid var(--line);border-radius:12px;padding:14px;text-align:center}
+.day.cheap{border:2px solid var(--green-bd);background:var(--green-bg)}
+.day.pricey{border:1px solid var(--amber-bd);background:var(--amber-bg)}
+.day .d{font-size:15px;font-weight:600}
+.day .w{font-size:12px;color:var(--ink3);margin-bottom:8px}
+.day .v{font-size:13px;font-weight:600}
+.day .s{font-size:11.5px;color:var(--ink2)}
+
+.cause{display:grid;grid-template-columns:34px 1fr;gap:12px;padding:14px 0;border-bottom:1px solid var(--line)}
+.cause:last-child{border-bottom:none}
+.cause .n{width:26px;height:26px;border-radius:50%;background:var(--red-bg);color:var(--red);
+  display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:600;margin-top:2px}
+.cause .n.ok{background:var(--green-bg);color:var(--green)}
+.cause h4{margin:0 0 4px}
+.cause p{margin:0;font-size:13.5px;color:var(--ink2)}
+
+footer{margin-top:56px;padding-top:20px;border-top:1px solid var(--line);
+  font-size:12.5px;color:var(--ink3);line-height:1.7}
+
+/* ===== 手机端适配（自动注入） ===== */
+.tw{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:0 0 14px}
+.tw table{margin:0}
+@media(max-width:720px){
+  body{font-size:15px}
+  .wrap{padding:20px 14px 88px}
+  h1{font-size:22px;line-height:1.34;letter-spacing:-.2px}
+  h2{font-size:17.5px;line-height:1.4}
+  section{margin-top:30px}
+  .sec-head{padding-bottom:8px;margin-bottom:16px}
+  .body{padding:15px 15px 17px}
+  .card{margin-bottom:18px;border-radius:14px}
+  table{font-size:12.6px}
+  th{white-space:normal}
+  th,td{padding:7px 8px}
+  .photos.p3{grid-template-columns:repeat(2,1fr)}
+  .photos.p3 a:nth-child(3){display:block}
+  .timeline{grid-template-columns:repeat(2,1fr)}
+  .lede,.sub{font-size:13.6px}
+}
+@media(max-width:400px){
+  .wrap{padding:16px 11px 84px}
+  h1{font-size:20px}
+  table{font-size:12px}
+  th,td{padding:6px 6px}
+}
+</style>
+<meta name="robots" content="noindex,nofollow,noarchive">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="apple-mobile-web-app-title" content="千岛湖选酒店">
+<meta name="theme-color" content="#F7F6F3">
+<meta name="format-detection" content="telephone=no">
+</head>
+<body>
+<div class="wrap">
+
+<h1>千岛湖亲子酒店 · 明豪同档次横评</h1>
+<p class="sub">秋假 11/25–29 · 2–3 晚 · 自驾 · 2 大 2 小（8 岁 + 10 岁）</p>
+<div class="meta">
+  <span class="chip"><b>9 家</b>同档入围</span>
+  <span class="chip">本轮新增 <b>可人·千岛湖</b></span>
+  <span class="chip">判据：<b>11 月底室内能用什么</b></span>
+  <span class="chip">版本 <b>v3</b></span>
+</div>
+
+<!-- ============ 1. 结论 ============ -->
+<section>
+  <div class="sec-head">
+    <h2>结论：同档 9 家，四张牌</h2>
+    <p class="lede">以明豪国际为基准，把千岛湖所有"5 星 / 豪华型 / 有湖景 / 有室内亲子设施"的酒店扫了一遍。<b>明豪仍是第一，但可人是这批里唯一值得单列出来讲的对手。</b></p>
+  </div>
+
+  <div class="grid g2">
+    <div class="card hero">
+      <span class="tag best">推荐 01 · 守住第一</span>
+      <p class="rank">基准位</p>
+      <p class="hname">明豪国际度假酒店</p>
+      <p class="hscore">5 星 · 携程 4.8 / 2.2 万条 · 同程 4.9 · 淳安豪华酒店榜 No.1</p>
+      <ul class="tight">
+        <li class="hit"><b>3000㎡ 星屿童趣王国</b>室内乐园（1–14 岁都有项目，专人看护）+ VR 潮玩馆</li>
+        <li class="hit"><b>洞穴汤泉</b> + <b>室内恒温泳池</b> —— 11 月底室外全停时这两项是主力</li>
+        <li class="hit">中心湖区 C 位，<b>步行 8 分钟到鱼街和夜游码头</b>，自驾去哪个方向都顺</li>
+        <li class="hit">套餐 <b>3 天 2 晚 ¥1299（折 ¥649/晚）</b>，含 2 大 2 小乐园畅玩；<b>10 月–次年 2 月周末不加价</b></li>
+        <li class="mid">代价：旺季滑梯 LOFT 房能翻到 2000+；有"设施磨损"的口径分歧</li>
+      </ul>
+      <p class="sub">同档里唯一做到"室内体量 + 位置 + 价格"三项都靠前的。</p>
+    </div>
+
+    <div class="card rival">
+      <span class="tag new">推荐 02 · 本轮新增 · 头号挑战者</span>
+      <p class="rank">同档里最特别，但不是最省心</p>
+      <p class="hname">可人·千岛湖酒店（游艇帆船岛屿庄园）</p>
+      <p class="hscore">5 星豪华型 · 携程 4.8 / 510 条 · 2026 中国 50 设计感酒店</p>
+      <ul class="tight">
+        <li class="hit"><b>独享 9 座私人岛屿</b>，吊桥可达：木质勇敢者道路、迷宫、草坪、果园、小动物农场</li>
+        <li class="hit"><b>室内泡汤</b>（小隔间像溶洞，可加温泉粉）+ 8/10 岁正合适的<b>游艇环湖</b>（入住赠送，半小时）</li>
+        <li class="hit">硬件在线：帕尔玛之水洗护 + 戴森 + 电动牙刷 + 部分房消毒柜 / 咖啡机</li>
+        <li class="miss"><b>室内乐园很小</b> —— 在大堂二楼，海洋球 + 小滑梯 + 帐篷 + 桌游，体量约明豪的十几分之一</li>
+        <li class="miss"><b>贵</b>：¥1428–2064 起，约明豪的 1.5–3 倍；位置在东南湖区，离鱼街、中心湖区码头远</li>
+      </ul>
+      <p class="sub">一句话：<b>把资源全砸在"私属岛屿"上的明豪镜像</b>。玩岛很香，室内兜底很弱。</p>
+    </div>
+  </div>
+
+  <div class="grid g2">
+    <div class="card">
+      <span class="tag val">推荐 03 · 明豪的平替</span>
+      <p class="rank">同档里最便宜的大体量乐园</p>
+      <p class="hname">千岛湖开元度假村（森泊焕境乐园）</p>
+      <p class="hscore">5 星 · 携程 4.7 / 1.05 万条 · 浙江亲子乐园酒店榜 No.9</p>
+      <ul class="tight">
+        <li class="hit"><b>超万平森泊焕境乐园</b>（室内外结合，≈1.5 个标准足球场）：无动力设施、趣味房车、萌宠互动、手工课堂</li>
+        <li class="hit"><b>室内恒温泳池 + 儿童泳池</b>，乐园全年可用</li>
+        <li class="hit">中心湖区麒麟半岛，<b>¥508–603 起</b> —— 同档最低</li>
+        <li class="miss">2004 年开业老牌，<b>部分房型偏旧</b>（2025 年局部翻新）；湖景不如明豪</li>
+      </ul>
+      <p class="sub">要"大体量乐园 + 低预算"，这是唯一能顶明豪的。</p>
+    </div>
+
+    <div class="card">
+      <span class="tag best">推荐 04 · 最平衡</span>
+      <p class="rank">风景和遛娃都要</p>
+      <p class="hname">洲至奢选千岛湖燕山度假酒店</p>
+      <p class="hscore">5 星（IHG Vignette Collection）· 4.7–4.9 / 约 1500 条</p>
+      <ul class="tight">
+        <li class="hit">室内外儿童乐园 + 儿童俱乐部 + 儿童泳池 + 水上滑梯 + 家庭影院</li>
+        <li class="hit">多处评价原话"<b>雨天也能遛娃</b>"</li>
+        <li class="hit"><b>豪华 LOFT 亲子滑梯房</b> / B.Duck 森林景亲子套房；家庭双床房是超大榻榻米、可拼大床</li>
+        <li class="hit">¥869 起，约明豪的六到七成</li>
+        <li class="miss">不在最中心位置；点评样本还少</li>
+      </ul>
+      <p class="sub">预算降一档、要求不降的最优解。</p>
+    </div>
+  </div>
+
+  <div class="note blue">
+    <span class="t">排名怎么定的</span>
+    <p>唯一判据是<b>「11 月底哪些设施真的能打开」</b>，不是评分。千岛湖 11 月平均 14.2℃，去年 11/25–29 实测白天 14–19.5℃、夜里 7–10℃、五天全晴 —— <b>室外泳池、水寨、皮划艇、帆船基本全停</b>。所以谁的室内体量大、温泉能开、湖景房能不能在屋里待得住，谁就赢。<b>评分高但室内只有 80㎡ 的，照样出局。</b></p>
+  </div>
+</section>
+
+<!-- ============ 2. 同档定义 ============ -->
+<section>
+  <div class="sec-head">
+    <h2>先说清："明豪同档次"是哪一档</h2>
+    <p class="lede">不按星级拍脑袋，用四条硬标准筛。满足四条才进本文的横评表。</p>
+  </div>
+
+  <div class="card">
+    <div class="kv" style="border-top:none;padding-top:0;margin-top:0">
+      <dt>① 星级</dt><dd>5 星 / 豪华型（明豪是同程标的"五星型"，携程"5 星"）</dd>
+      <dt>② 景观</dt><dd>有湖景房型（明豪 90% 房可览湖景或内湖）</dd>
+      <dt>③ 室内</dt><dd><b>有室内亲子设施</b> —— 这是 11 月底的胜负手，没有的直接降档</dd>
+      <dt>④ 价格</dt><dd>2–3 晚总价落在 <b>¥700–4000</b> 区间（低于此是经济型，高于此是顶奢）</dd>
+    </div>
+  </div>
+
+  <p>按这四条，扫出来的同档名单是 <b>9 家</b>：</p>
+  <div class="tbl-wrap">
+  <div class="tw"><table>
+    <thead><tr><th>档位</th><th>酒店</th><th>为什么在这一档</th></tr></thead>
+    <tbody>
+      <tr class="hi"><td>基准</td><td><b>明豪国际度假酒店</b></td><td>四条全中，且室内体量与位置两项同档第一</td></tr>
+      <tr class="hi2"><td>同档 · 新</td><td><b>可人·千岛湖酒店</b></td><td>5 星豪华 + 湖景 + 有室内乐园与泡汤 + ¥1428–2064</td></tr>
+      <tr><td>同档</td><td>千岛湖开元度假村</td><td>5 星 + 湖景 + 万平森泊乐园 + ¥508–603</td></tr>
+      <tr><td>同档</td><td>绿城千岛湖喜来登</td><td>5 星 + 270° 湖景 + 室内恒温泳池与儿童俱乐部 + ¥664–899</td></tr>
+      <tr><td>同档</td><td>千岛湖滨江希尔顿</td><td>5 星 + 湖景 + 室内恒温泳池与儿童乐园 + ¥577–628</td></tr>
+      <tr><td>同档</td><td>洲至奢选千岛湖燕山</td><td>5 星 + 室内外儿童乐园 + ¥869</td></tr>
+      <tr><td>同档</td><td>自由洲际殿</td><td>5 星 + 羡山半岛独享湖面 + 洲际室内乐园 + ¥1131</td></tr>
+      <tr><td>同档 · 低半档</td><td>绿城度假酒店</td><td>5 星 + 湖景 + 室内外泳池与儿童俱乐部 + ¥359（2025 新装）</td></tr>
+      <tr><td>同档 · 顶奢对照</td><td>千岛湖安岚（原安麓）</td><td>5 星顶奢 + 独栋别墅 + ¥2500–3000（列进来做上限标尺）</td></tr>
+      <tr class="lo"><td>反面样本</td><td>Club Med 千岛湖</td><td>4 星度假，室内游乐场实测仅约 <b>80㎡</b> —— 用它说明"室内体量"这条判据有多致命</td></tr>
+    </tbody>
+  </table></div>
+  </div>
+
+  <div class="note">
+    <span class="t">顺带一个"一句话备选"</span>
+    <p><b>千岛湖假日酒店</b>（洲际旗下，4 星，4.8 / 8170 条，¥299 起，超大面湖观景平台，淳安高档酒店榜 No.2）—— 纯湖景、纯便宜，室内几乎没有亲子设施；<b>千岛湖丽筠（Radisson Blu，5 星豪华，4.6）</b>有"尊贵双床山景亲子房""星空亲子主题房"，但点评少、位置在珍珠大道不算湖边；<b>千岛湖福朋喜来登</b>（¥398 起，有温泉 + 水上滑梯）算中端，不参与本篇同档比较。</p>
+  </div>
+</section>
+
+<!-- ============ 3. 明豪 vs 可人 ============ -->
+<section>
+  <div class="sec-head">
+    <h2>核心对拆：明豪 vs 可人</h2>
+    <p class="lede">两家同为 5 星、同为 4.8 分、都主打"湖景 + 亲子"。但它们是<b>完全相反的两条路</b>——九个维度逐项摊开。</p>
+  </div>
+
+  <div class="tbl-wrap">
+  <div class="tw"><table>
+    <thead><tr><th>维度</th><th>明豪国际</th><th>可人·千岛湖</th></tr></thead>
+    <tbody>
+      <tr><td><b>底层打法</b></td><td>把资源砸在<b>室内</b>与<b>位置</b>上 → 遛娃放电型</td><td>把资源砸在<b>私属岛屿</b>与<b>设计感</b>上 → 慢度假体验型</td></tr>
+      <tr><td><b>室内放电</b></td><td class="p-low"><b>3000㎡</b> 星屿童趣王国：蹦床、海洋球、淘气堡、旋转木马、公主屋 / 警察局 / 加油站过家家、卡丁车、VR 潮玩馆，<b>1–14 岁都有项目，专人看护</b></td><td class="p-high"><b>体量小</b>：大堂二楼儿童乐园 + 书吧，海洋球、小滑梯、帐篷、玩具桌游。<b>待过 1 小时基本到头</b></td></tr>
+      <tr><td><b>冬季主力</b></td><td>洞穴汤泉（沐屿汤泉）+ 室内恒温泳池 + 3000㎡ 乐园 + 萌宠乐园 + 每天演出</td><td>室内泡汤（小隔间、可加温泉粉）+ 9 岛徒步 + 游艇环湖（看天气）</td></tr>
+      <tr><td><b>户外资产</b></td><td>萌宠乐园、九曲白玉桥喂锦鲤、观景平台、内湖<b>水幕电影</b>、大堂水帘光影</td><td class="p-low"><b>9 座私家岛屿</b>（吊桥可达）：木质勇敢者道路、迷宫、草坪、果园、小动物农场；无边镜面泳池（冬停）</td></tr>
+      <tr><td><b>位置</b></td><td class="p-low">中心湖区梦姑路 8 号，<b>步行 8 分钟到鱼街 + 夜游码头</b>，三面环湖独占半岛</td><td class="p-high">东南湖区睦州大道 999 号，离中心湖区码头 / 鱼街<b>远</b>；近啤酒小镇 + 网红灯塔 + 青溪银泰；距千岛湖站约 28–30km</td></tr>
+      <tr><td><b>价格</b></td><td class="p-low">套餐 <b>3 天 2 晚 ¥1299（¥649/晚）</b>，含 2 大 2 小乐园畅玩；<b>10 月–次年 2 月周末不加价</b>（上一季口径）</td><td class="p-high">起价 <b>¥1428–2064</b>，约明豪的 <b>1.5–3 倍</b>；旺季上浮更明显</td></tr>
+      <tr><td><b>二孩房型</b></td><td><b>70㎡ 豪华露台景观双床房</b> = 1 张 1.8m 大床 + 1 张 1.35m 单人床（正合二娃）；另有金爵湖景亲子套房、糖果飞屋滑梯家庭房、海底小纵队 / B.duck 主题房</td><td class="p-low"><b>131㎡ 双卧家庭套房</b>（1 张特大床 + 2 张单人床，分两卧）；<b>私家花园双卧套房</b>同样 131㎡；另有豪华湖景亲子双床房</td></tr>
+      <tr><td><b>硬件配置</b></td><td>宝格丽洗护 + 戴森 + TOTO 智能卫浴 + 金可儿床垫 + 康乃馨全鹅绒布草 + 语音智能客控；自助早餐 200+ 种；必吃榜餐厅主打有机鱼头汤</td><td class="p-low">帕尔玛之水洗护 + 戴森 + 电动牙刷 + 部分房消毒柜 / 咖啡机；中餐厅砂锅鱼头"没有土腥味"、自有有机农场、<b>退房送自种蔬菜</b></td></tr>
+      <tr><td><b>口碑风险</b></td><td>旺季价格跳（滑梯 LOFT 房暑假 1200+、长假 2000+）；"设施磨损"存在口径分歧</td><td>平台差评集中在三条：<b>房间隔音差、餐食品质不佳、价格与体验不符</b>（目前仅 7 条，样本小但指向一致）；有住客直说"<b>硬件算不上豪华，胜在有品位</b>"</td></tr>
+      <tr><td><b>额外亮点</b></td><td>携程 <b>2026 全球 100 亲子乐园酒店</b>（同档唯一入选）；270° 观景台下午茶；接驳高铁站大巴 15 元/人</td><td>携程 <b>2026 中国 50 设计感酒店</b>；茶书院、艺术馆、买手店、藏品馆；管家式服务；《轧戏》取景地</td></tr>
+    </tbody>
+  </table></div>
+  </div>
+
+  <div class="note purple">
+    <span class="t">对拆完，结论其实很清楚</span>
+    <p>这两家是<b>镜像</b>：明豪把预算全压在"孩子在里面能待一整天"，可人把预算全压在"这片湖是我家的"。</p>
+    <p>而 11 月底恰好是<b>室外打折、室内升值</b>的季节 —— 可人的核心资产（无边泳池停、帆船停、皮划艇停，游艇要<b>看湖面风况可能停航</b>，游记明确提醒"湖边风大、比市区体感低、务必厚羽绒服 + 帽子 + 手套"）在 11 月要打七折；明豪的核心资产（室内乐园、汤泉、恒温泳池）在 11 月<b>一分不打折，反而是全年最舒服的时段</b>。</p>
+    <p><b>所以：要"带孩子玩得尽兴"，选明豪；要"大人也想过一个安静高档的周末、顺便带孩子见见世面"，可人是这批里最特别的一家 —— 但要接受它比明豪贵一倍、室内兜底薄一半。</b></p>
+  </div>
+
+  <div class="grid g2">
+    <div class="card">
+      <h4>什么情况下可人反而更值</h4>
+      <ul class="tight">
+        <li class="hit">你愿意为"<b>9 座私家岛 + 游艇</b>"这种稀缺体验付费，孩子的兴奋点不在滑梯上</li>
+        <li class="hit">碰上<b>连续晴天</b>的窗口 —— 登岛徒步、吊桥、果园、动物农场全都成立，这比明豪的室内更好玩</li>
+        <li class="hit">你想要<b>131㎡ 双卧套房</b>（两娃分房睡），明豪的亲子房做不到真正分卧</li>
+        <li class="hit">你能接受"下雨 / 大风天只能泡汤 + 书吧 + 桌游"的兜底方案</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h4>什么情况下别选可人</h4>
+      <ul class="tight">
+        <li class="miss">把"<b>孩子有地方消耗精力</b>"当第一需求 —— 它室内太小，撑不了一天</li>
+        <li class="miss">想顺便逛千岛湖镇、吃鱼街、坐夜游船 —— 它离中心湖区太远</li>
+        <li class="miss">对<b>隔音</b>敏感（差评第一条就是隔音差）</li>
+        <li class="miss">预算敏感 —— 同价位在明豪能拿湖景亲子套房 + 汤泉 + 3000㎡ 乐园，还剩钱玩别的</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 4. 横评总表 ============ -->
+<section>
+  <div class="sec-head">
+    <h2>同档 9 家 · 一张表看全</h2>
+    <p class="lede">"起价"是最低房型价，多数不含早、不含乐园票；实际成行请按套餐口径算（见下一节价格总账）。</p>
+  </div>
+
+  <div class="tbl-wrap">
+  <div class="tw"><table>
+    <thead><tr>
+      <th>酒店</th><th>星级 / 评分</th><th>位置</th><th>室内主力（11 月可用度）</th><th>起价</th><th>二孩房型</th>
+    </tr></thead>
+    <tbody>
+      <tr class="hi">
+        <td><b>明豪国际</b></td>
+        <td>5 星<br>4.8 / 2.2 万条</td>
+        <td>中心湖区 C 位</td>
+        <td><b>3000㎡ 乐园 + 汤泉 + 恒温泳池 + VR 馆</b><br><span class="tag val" style="margin:0">极强</span></td>
+        <td class="num price p-mid">¥859–1033<br><span style="font-weight:400;color:var(--ink3)">套餐 ¥649/晚</span></td>
+        <td>70㎡ 双床房（1.8m+1.35m）</td>
+      </tr>
+      <tr class="hi2">
+        <td><b>可人·千岛湖</b><br><span style="color:var(--ink3);font-size:12px">游艇帆船岛屿庄园</span></td>
+        <td>5 星豪华<br>4.8 / 510 条</td>
+        <td>东南湖区<br>离镇远</td>
+        <td>儿童乐园 + 书吧（小）+ 室内泡汤<br><span class="tag warn" style="margin:0">中（靠登岛补）</span></td>
+        <td class="num price p-high">¥1428–2064</td>
+        <td>131㎡ 双卧家庭套房</td>
+      </tr>
+      <tr>
+        <td><b>开元度假村</b><br><span style="color:var(--ink3);font-size:12px">森泊焕境乐园</span></td>
+        <td>5 星<br>4.7 / 1.05 万条</td>
+        <td>中心湖区麒麟半岛</td>
+        <td><b>超万平森泊乐园 + 恒温泳池 + 儿童泳池</b><br><span class="tag val" style="margin:0">强</span></td>
+        <td class="num price p-low">¥508–603</td>
+        <td>别墅房型 / 趣味房车</td>
+      </tr>
+      <tr>
+        <td><b>绿城喜来登</b></td>
+        <td>5 星<br>4.8 / 8128 条</td>
+        <td>中心湖区<br>270° 湖景</td>
+        <td>恒温泳池 + 喜乐梦之岛乐园 + 儿童俱乐部<br><span class="tag warn" style="margin:0">中（水上乐园是户外，冬停）</span></td>
+        <td class="num price p-mid">¥664–899</td>
+        <td>48㎡ 起</td>
+      </tr>
+      <tr>
+        <td><b>滨江希尔顿</b></td>
+        <td>5 星<br>4.7 / 6783 条</td>
+        <td>东南湖区</td>
+        <td>恒温泳池 + 儿童乐园 + 儿童俱乐部<br><span class="tag val" style="margin:0">中强</span></td>
+        <td class="num price p-low">¥577–628</td>
+        <td>猪猪侠酷芽亲子湖景双床房、豪华湖景亲子套房</td>
+      </tr>
+      <tr>
+        <td><b>洲至奢选燕山</b></td>
+        <td>5 星<br>4.7–4.9</td>
+        <td>非最中心</td>
+        <td>室内外儿童乐园 + 儿童俱乐部 + 儿童泳池 + 滑梯 + 家庭影院<br><span class="tag val" style="margin:0">中强</span></td>
+        <td class="num price p-mid">¥869</td>
+        <td>LOFT 亲子滑梯房、B.Duck 套房</td>
+      </tr>
+      <tr>
+        <td><b>自由洲际殿</b></td>
+        <td>5 星<br>4.7 / 8953 条</td>
+        <td>羡山半岛<br>独享湖面</td>
+        <td>洲际室内乐园（偏小）+ 阿狸主题 + 手工课<br><span class="tag warn" style="margin:0">中</span></td>
+        <td class="num price p-mid">¥1131</td>
+        <td>—</td>
+      </tr>
+      <tr>
+        <td><b>绿城度假</b></td>
+        <td>5 星<br>4.7 / 1.15 万条</td>
+        <td>中心湖区<br>县政府隔壁</td>
+        <td>室内外泳池 + 儿童俱乐部<br><span class="tag warn" style="margin:0">中（规模不如开元）</span></td>
+        <td class="num price p-low">¥359</td>
+        <td><b>1 号楼双大床亲子套房</b></td>
+      </tr>
+      <tr>
+        <td><b>千岛湖安岚</b><br><span style="color:var(--ink3);font-size:12px">原安麓</span></td>
+        <td>5 星顶奢</td>
+        <td>西南湖区姜家镇<br>距高铁站 66km</td>
+        <td>儿童乐园 + 室内恒温泳池（配置少）<br><span class="tag bad" style="margin:0">弱</span></td>
+        <td class="num price p-high">¥2500–3000</td>
+        <td>80㎡ 起，独栋别墅</td>
+      </tr>
+      <tr class="lo">
+        <td>Club Med 千岛湖</td>
+        <td>4 星度假<br>4.6</td>
+        <td>西南角山坳<br>离镇 32–38 分钟</td>
+        <td>室内游乐场实测仅约 <b>80㎡</b><br><span class="tag bad" style="margin:0">弱</span></td>
+        <td class="num">¥1198 / 2 晚</td>
+        <td>—</td>
+      </tr>
+    </tbody>
+  </table></div>
+  </div>
+
+  <div class="note green">
+    <span class="t">读表的三个关键</span>
+    <p><b>① 明豪是唯一"室内体量 + 位置 + 价格"三项都进前二的。</b>开元室内比它更大（万平 vs 3000㎡），但开元房型偏旧、湖景弱；喜来登湖景最好，但室内只有恒温泳池 + 儿童乐园，水上乐园是户外、冬季关。</p>
+    <p><b>② 可人是唯一"贵一倍还室内更弱"的。</b>它的价签买的是岛屿和设计，不是设施。</p>
+    <p><b>③ 安岚和 Club Med 放进来是为了定标尺</b>：安岚说明"顶奢不等于带娃合适"，Club Med 说明"80㎡ 室内撑不起 11 月的两天"。</p>
+  </div>
+</section>
+
+<!-- ============ 5. Club Med 专题 ============ -->
+<section>
+  <div class="sec-head">
+    <h2>专题：Club Med 千岛湖为什么评价这么差</h2>
+    <p class="lede">它 4.6 分，但差评不是偶发情绪 —— 是六个成体系的成因。也正好用来验证上面那条"室内体量"判据。</p>
+  </div>
+
+  <div class="card">
+    <div class="cause"><div class="n">1</div><div>
+      <h4>"一价全包"名不副实 —— 头号原因</h4>
+      <p>顾客冲"全包"下单，到场发现：<b>室内攀岩 60 元/人、瑜伽课 100 元/人，连酒店大堂内的活动都单独收费</b>。招牌项目"植物绘画课"<b>全程只有 28 分钟，物料是 A4 纸 + 蜡笔 + 水彩笔各一套，没有讲解</b>。预期落差比设施差本身更致命。</p>
+    </div></div>
+    <div class="cause"><div class="n">2</div><div>
+      <h4>位置偏远 + 周边荒芜</h4>
+      <p>在西南角山坳，<b>距主城区实际驾车 32–38 分钟</b>。周边除 1 家汉堡王 + 3 家农家乐，没有任何餐饮或商超，<b>外卖基本不配送</b>。接驳车末班 <b>20:30</b>，实测打车返程平均等 17 分钟。<span style="color:var(--green)">（你自驾，这条你扛得住 —— 你比多数差评者强的地方就在这）</span></p>
+    </div></div>
+    <div class="cause"><div class="n">3</div><div>
+      <h4>室内设施体量太小（对你最关键）</h4>
+      <p><b>室内游乐场实测仅约 80㎡</b> —— 1 个迷你蹦床、2 组矮滑梯、1 条软垫爬行道，待过 20 分钟就没新鲜感。综合算下来<b>活动密度比同价位亲子酒店低 37%，单日可消耗时长不足 4 小时</b>。<br>对比：<b>明豪的室内乐园是 3000㎡，差 37 倍；开元的森泊是万平级。</b></p>
+    </div></div>
+    <div class="cause"><div class="n">4</div><div>
+      <h4>餐饮配不上一价全包</h4>
+      <p>早餐还行（22 种、现烤华夫饼复购率 92%），但<b>午餐热菜区只有 4 道主荤、轮换慢</b>；<b>千岛湖鱼头汤被连续 3 餐检出明显土腥味</b>（实测 pH 偏碱 7.8）—— 在一价全包、又是本地招牌菜的语境下，这条杀伤力很大。另有住客反映自助餐有苍蝇、早餐补货慢。</p>
+    </div></div>
+    <div class="cause"><div class="n">5</div><div>
+      <h4>服务与卫生波动大，撞运气</h4>
+      <p>G.O 两极分化：有人遇到贴心 G.O 给满分；也有人写"夜里活动太水，G.O 一点没热情，完成任务而已"。其他反复出现的：两个孩子只给一套儿童洗漱用品、纸巾不补、"没有真正的整理服务"、<b>室内儿童区地板不洁，孩子白袜子玩完变黑</b>。</p>
+    </div></div>
+    <div class="cause"><div class="n">6</div><div>
+      <h4>隔音 —— 但要打个问号</h4>
+      <p>有住客说"楼上光脚蹦跶像地震"，也有评测称"隔音优于同类山居度假村"。<b>大概率是房型差异：山居别墅隔音好、主楼标间差。</b>选它务必避开主楼标间。</p>
+    </div></div>
+  </div>
+
+  <div class="note">
+    <span class="t">公平地说，它真正值钱的只有托管</span>
+    <p>G.O 托管覆盖早 9:00 到晚 21:00、每组最多 6 名儿童、配急救包与定位手环。有评测给出了最锋利的结论 —— <b>"按 2 晚 2k 总价测算，单日全包成本约 720 元。若仅需托管服务，性价比显著高于活动本身。"</b></p>
+    <p>所以：<b>你如果就是想花钱让 G.O 帮你看孩子，选它（并且选别墅 / 山居房型）；否则同价位有更好的。</b></p>
+  </div>
+</section>
+
+<!-- ============ 6. 价格总账 ============ -->
+<section>
+  <div class="sec-head">
+    <h2>价格总账：2 晚 vs 3 晚</h2>
+    <p class="lede">按 2 大 2 小、周中入住估。标 ★ 的是含餐或含乐园票、口径更"实"的。</p>
+  </div>
+
+  <div class="tbl-wrap">
+  <div class="tw"><table>
+    <thead><tr><th>酒店</th><th>2 晚</th><th>3 晚</th><th>含什么</th><th>人均 / 晚（4 人）</th></tr></thead>
+    <tbody>
+      <tr class="hi">
+        <td><b>★ 明豪国际</b>（套餐口径）</td>
+        <td class="num price p-low">¥1,298</td>
+        <td class="num price p-low">¥1,947</td>
+        <td>早餐 + <b>2 大 2 小星屿童趣王国畅玩</b></td>
+        <td class="num">¥162–244</td>
+      </tr>
+      <tr>
+        <td>★ 开元度假村</td>
+        <td class="num price p-low">¥1,016–1,206</td>
+        <td class="num price p-low">¥1,524–1,809</td>
+        <td>视套餐，多有乐园票</td>
+        <td class="num">¥127–226</td>
+      </tr>
+      <tr>
+        <td>★ 洲至奢选燕山</td>
+        <td class="num price p-mid">¥1,738</td>
+        <td class="num price p-mid">¥2,607</td>
+        <td>视套餐</td>
+        <td class="num">¥217–326</td>
+      </tr>
+      <tr>
+        <td>绿城度假</td>
+        <td class="num price p-low">¥1,000–1,266</td>
+        <td class="num price p-low">¥1,500–1,899</td>
+        <td>多数含早</td>
+        <td class="num">¥125–238</td>
+      </tr>
+      <tr>
+        <td>绿城喜来登</td>
+        <td class="num price p-mid">¥1,282 起</td>
+        <td class="num price p-mid">¥1,923 起</td>
+        <td>视套餐</td>
+        <td class="num">¥160 起</td>
+      </tr>
+      <tr>
+        <td>滨江希尔顿</td>
+        <td class="num price p-low">¥1,154–1,256</td>
+        <td class="num price p-low">¥1,731–1,884</td>
+        <td>视套餐</td>
+        <td class="num">¥144–209</td>
+      </tr>
+      <tr class="hi2">
+        <td><b>可人·千岛湖</b></td>
+        <td class="num price p-high">¥2,856–4,128</td>
+        <td class="num price p-high">¥4,284–6,192</td>
+        <td>多为含双早</td>
+        <td class="num price p-high">¥357–774</td>
+      </tr>
+      <tr>
+        <td>自由洲际殿</td>
+        <td class="num price p-mid">¥2,262</td>
+        <td class="num price p-mid">¥3,393</td>
+        <td>含徒步 + 喂养体验</td>
+        <td class="num">¥283–424</td>
+      </tr>
+      <tr>
+        <td>千岛湖安岚</td>
+        <td class="num price p-high">¥3,882–6,000</td>
+        <td class="num price p-high">¥5,823–9,000</td>
+        <td>视房型，别墅另计</td>
+        <td class="num price p-high">¥485–1,125</td>
+      </tr>
+      <tr class="lo">
+        <td>Club Med（一价全包）</td>
+        <td class="num">¥1,198</td>
+        <td class="num">¥1,599</td>
+        <td>三餐 + 下午茶 + 夜宵 + 酒水 + 托管</td>
+        <td class="num">¥150–200</td>
+      </tr>
+    </tbody>
+  </table></div>
+  </div>
+
+  <div class="note blue">
+    <span class="t">这张表最该注意的两件事</span>
+    <p><b>① 明豪的套餐价是这批里性价比最高的之一。</b>3 天 2 晚 ¥1299，含 2 大 2 小的乐园畅玩 —— 如果按"单项买"算，光两个孩子的乐园票就不止这个差价的量级。而且<b>明豪 10 月到次年 2 月周末不加价</b>，这在亲子酒店里很少见。<span style="color:var(--ink3)">（口径：上一季套餐，2026 年 11 月要等新一期促销放出来）</span></p>
+    <p><b>② 可人的确是同档里最贵的，而且贵的不是设施。</b>2 晚 ¥2856 起 —— 同样的钱在明豪能拿 4 晚还带乐园票。<b>你为它多付的钱，买的是"9 座私家岛 + 游艇 + 设计感"这件事本身。</b>值不值，取决于这算不算你家的兴奋点。</p>
+  </div>
+</section>
+
+<!-- ============ 7. 日期 ============ -->
+<section>
+  <div class="sec-head">
+    <h2>日期怎么选最省</h2>
+    <p class="lede">周日至周四最便宜，周五周六跳价。11/25 是周三 —— 这个日期天然占便宜。</p>
+  </div>
+
+  <div class="timeline">
+    <div class="day cheap"><div class="d">11/25</div><div class="w">周三</div><div class="v">最低价</div><div class="s">入住</div></div>
+    <div class="day cheap"><div class="d">11/26</div><div class="w">周四</div><div class="v">最低价</div><div class="s">全城淡季</div></div>
+    <div class="day pricey"><div class="d">11/27</div><div class="w">周五</div><div class="v">跳价</div><div class="s">建议退房</div></div>
+    <div class="day pricey"><div class="d">11/28</div><div class="w">周六</div><div class="v">最高价</div><div class="s">避开</div></div>
+    <div class="day"><div class="d">11/29</div><div class="w">周日</div><div class="v">回落</div><div class="s">回家收心</div></div>
+  </div>
+
+  <div class="note green">
+    <span class="t">只看"价格"这一个口径</span>
+    <p><b>11/25（周三）入住 → 11/27（周五）退房，住 2 晚最省。</b>全程落在周中，价格最低、人流最少（千岛湖秋假期间正好是淡季）。</p>
+    <p>想住 3 晚，就吃进一个周五晚，价格会上浮 —— 这时<b>明豪"周末不加价"的套餐价值就出来了</b>，比其他家更抗涨。</p>
+  </div>
+
+  <div class="note amber">
+    <span class="t">但这只是第一个口径</span>
+    <p>"住几晚"还有第二个口径 —— <b>内容够不够玩</b>。按这个口径算，结论反而落在 <b>3 晚</b> 上。见下一节。</p>
+  </div>
+</section>
+
+<!-- ============ 7.5 住几晚 ============ -->
+<section>
+  <div class="sec-head">
+    <h2>住 2 晚还是 3 晚？两个口径，结论相反</h2>
+    <p class="lede">这个问题被算成一道"钱"的题太久了。真正决定体验的是第二个口径 —— 4 小时车程换来几个"完整游玩日"。</p>
+  </div>
+
+  <div class="tw"><table>
+    <thead>
+      <tr><th>口径</th><th>结论</th><th>依据</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><b>价格最优</b></td>
+        <td class="num"><b>2 晚</b></td>
+        <td>11/25 + 11/26 两晚全在周中最低价；第 3 晚必然落到 11/27（周五）这个跳价夜。</td>
+      </tr>
+      <tr>
+        <td><b>内容最优</b></td>
+        <td class="num"><b>3 晚</b></td>
+        <td>单程 3.5–4h，2 晚只买到 <b>1 个完整游玩日</b>。11 月底 17:00 天黑，每天有效户外时间约 7.5 小时，<b>一个整天塞不下两个主线项目</b>。</td>
+      </tr>
+    </tbody>
+  </table></div>
+
+  <div class="note blue">
+    <span class="t">结论</span>
+    <p><b>默认按 3 晚排（11/25 周三入住 → 11/28 周六退房）。</b>理由不是"多玩一天"，而是<b>"4 小时车程只换 1 个完整日，太亏"</b>：3 晚刚好排下两条主线（自驾环湖 / 中心湖区游船）+ 一天机动，还能一天只排一个项目、午后回酒店断电，符合你原来的节奏。</p>
+    <p><b>撤掉骑行之后，3 晚的结论反而更硬。</b>游船在冬季<b>只能赶上午班次</b>（最晚 12:00 取票、且少去一个岛），等于独占一个上午；再加上自驾环湖要吃掉一整天 —— 2 晚那个"1 个完整日"<b>排不下这两件必做的事</b>。详见下一节。</p>
+  </div>
+
+  <h3>11 月底到底有多少内容（这是判断"几天够"的全部依据）</h3>
+  <div class="tw"><table>
+    <thead>
+      <tr><th>量级</th><th>项目</th><th>备注</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td rowspan="5"><b>半天级</b><br><span style="font-size:12px;color:#8A8880">5 个</span></td>
+        <td><b>自驾环湖</b>（替代骑行）</td>
+        <td>千汾线 → 淳杨线 → 千威线，<b>全程约 150km 柏油路</b>；观景台都配免费车位。孩子不用动腿、冷了能回车</td>
+      </tr>
+      <tr><td><b>中心湖区游船</b></td><td>湖区只能坐船到，是唯一"自驾去不了"的部分；<b>冬季仅上午班次</b>，全程 5–6 小时</td></tr>
+      <tr><td>天屿山观景台</td><td>观光扶梯上山不费体力，日落最佳；¥45 起（含扶梯+水滑道约 ¥190）</td></tr>
+      <tr><td>啤酒小镇 + 骑龙巷</td><td>都免费；卡丁车、热气球（晴天、大风停飞）、网红灯塔</td></tr>
+      <tr><td>红叶湾</td><td><b>红叶最佳期就卡在 11 月中下旬–12 月初</b>，而且<b>就在淳杨线上，可以并进自驾环湖那天</b></td></tr>
+      <tr>
+        <td rowspan="3"><b>2 小时级</b><br><span style="font-size:12px;color:#8A8880">室内兜底</span></td>
+        <td>淳安博物馆</td><td><b>免费</b>，4 层，周一闭馆（09:00–16:30）—— 坏天气的第一顺位</td>
+      </tr>
+      <tr><td>千岛湖自然博物馆</td><td>恐龙化石、中华龙鸟、海百合；私人馆，需门票</td></tr>
+      <tr><td>富文乡中心小学</td><td>彩虹色校舍，孩子拍照很出片；¥20</td></tr>
+      <tr>
+        <td><b>酒店本身</b></td>
+        <td>明豪：星屿童趣王国 + 汤泉 + 恒温泳池</td>
+        <td>≈ 半天到一天，天冷或下雨就靠它兜</td>
+      </tr>
+    </tbody>
+  </table></div>
+
+  <p class="lede">加起来：<b>硬内容约 4–5 个半天</b>（其中"自驾环湖"和"红叶湾"可以合成一天）。2 晚只有 1 个完整日 —— <b>排不下"自驾环湖一整天 + 游船一上午"这两件必做的事</b>；3 晚（2 个完整日）刚好。</p>
+
+  <div class="note amber">
+    <span class="t">更正是我上一轮的一个说法</span>
+    <p>我上一轮暗示"多订一天可以挡雨"，<b>这个理由比我说的弱</b>。淳安站 11 月降水 52.4mm / 8.7 个雨日，是全年第二干的月份（仅次于 12 月）；去年 11/25–29 更是五天全晴。<b>天气冗余只是附带的，不是主要理由。</b></p>
+  </div>
+
+  <h3>什么时候该改回 2 晚</h3>
+  <ul class="tight">
+    <li class="hit"><b>你只想要"湖边躺平 + 吃鱼头"</b>，不打算把景点走一遍 —— 那 2 晚更省、更不浪费。</li>
+    <li class="hit"><b>想让 11/28–29 整个周末在家收心、写作业</b> —— 11/27 晚到家，缓冲更足。</li>
+    <li class="mid"><b>预算敏感，或你选的酒店第 3 晚正好跳价</b> —— 明豪"周末不加价"的口径若今年延续，则它不受影响。</li>
+  </ul>
+</section>
+
+<!-- ============ 7.8 不骑行怎么玩 ============ -->
+<section>
+  <div class="sec-head">
+    <h2>不骑车怎么玩：两条替代路线</h2>
+    <p class="lede">带 8 岁和 10 岁的孩子不排骑行，等于把原来"半天级"里最重的一块换成两件事 —— 自驾环湖 + 坐船。这两条都比骑行更适合小朋友。</p>
+  </div>
+
+  <h3>替代 ①　自驾环湖（顶替骑行）</h3>
+
+  <div class="card">
+    <ul class="tight">
+      <li class="hit"><b>千岛湖最值钱的不是景点，是环湖那条路。</b>骑行能看的风景，开车全都能看 —— 而且孩子不用动腿、冷了能回车、困了能在车上睡。</li>
+      <li class="hit"><b>路线：千汾线 → 淳杨线 → 千威线，全程约 150km，全是平整柏油路</b>，普通家用轿车毫无压力。千汾线最贴湖、淳杨线最壮观、千威线最适合看日落。</li>
+      <li class="hit"><b>每个观景台都配免费临时车位</b>，随停随拍不用愁停车。但<b>限速只有 40–60km/h，路边绝对不能随意停</b>。</li>
+      <li class="hit">一条线串得起来：<b>上江埠观景台</b>（1278m 跨湖大桥 + 群岛）→ 红山谷 → <b>下姜村</b>（《我和我的家乡》取景地，农家乐柴火鱼）→ 汾口镇 → <b>芹川古村</b>（750 年徽派古村，米羹、毛豆腐）→ 姜家镇 → 竹里村 / 小金山观景台 → <b>天屿山</b> → 千岛湖大桥收尾。</li>
+      <li class="mid"><b>顺手把红叶湾并进来</b> —— 红叶湾就在淳杨线上，11 月中下旬到 12 月初正是红叶最佳期。骑行做不到"顺路多绕 20km"，开车可以。</li>
+      <li class="miss"><b>△ 晕车要防。</b>临水弯道和山路都多，8 岁、10 岁出发前 30 分钟吃晕车药，多看远处少看手机，每个观景台都下来走两步。</li>
+    </ul>
+  </div>
+
+  <h3>替代 ②　中心湖区游船（必须排，且只能排上午）</h3>
+
+  <p class="lede">湖区<b>只能坐船抵达</b>，这是千岛湖唯一"自驾到不了"的部分，也是孩子最买账的项目。而<b>冬季班次会缩水 —— 这一条直接决定行程怎么排。</b></p>
+
+  <div class="tw"><table>
+    <thead>
+      <tr><th>取票时段（11/1–次年 3/31）</th><th>游览岛屿</th><th>判断</th></tr>
+    </thead>
+    <tbody>
+      <tr><td class="num"><b>08:00–09:00</b></td><td>梅峰岛 · 渔乐岛 · 月光岛</td><td><b>首选，人少光线好</b></td></tr>
+      <tr><td class="num"><b>09:30–10:30</b></td><td>梅峰岛 · 渔乐岛 · 月光岛</td><td>次选，仍可接受</td></tr>
+      <tr><td class="num">12:00–13:00</td><td>梅峰岛 · 龙山岛</td><td><b>少去一个岛，回来就天黑 —— 不要选</b></td></tr>
+    </tbody>
+  </table></div>
+
+  <div class="note amber">
+    <span class="t">由此推出一条硬约束</span>
+    <p><b>游船独占一个上午，不能和别的项目拼。</b>全程 5–6 小时，赶早班 08:00 取票，大约 13:00–14:00 回码头。下午正好回酒店断电，傍晚再上天屿山看日落 —— 这一天就满了。</p>
+  </div>
+
+  <div class="grid g2">
+    <div class="card">
+      <h4>票价（注意：你的日期还在旺季口径内）</h4>
+      <ul class="tight">
+        <li><b>旺季 3.1–11.30：中心湖区套票 ¥195</b>（大门票 130 + 船票 65）。<b>船票是强制的，不能只买门票。</b></li>
+        <li>淡季 12–2 月才降到 ¥175 —— <b>你卡在 11/30 前，是旺季价</b>，11 月底已经接近淡季、景美人少，但票按旺季收。</li>
+        <li>东南湖区（黄山尖线，看"天下为公"岛群）旺季 ¥165。</li>
+        <li><b>梅峰岛缆车往返 ¥60，自费</b> —— 孩子爬不动就直接买，别硬爬。</li>
+        <li>儿童：<b>1.2m（含）–1.5m（不含）买儿童票；1.2m 以下门票船票全免</b>。8 岁、10 岁大概率超 1.2m，按儿童票准备，<b>带好证件</b>。</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h4>其他必须知道的三条</h4>
+      <ul class="tight">
+        <li><b>中心湖区和东南湖区码头不互通、船票不通用 —— 一天只能选一个湖区。</b></li>
+        <li>码头官方停车场：<b>首小时免费，之后 ¥5/小时，平日封顶 ¥20</b>，有充电桩。旺季 9 点后车位紧张，别停路边。</li>
+        <li>购票走<b>线上实名预约制</b>（官方平台或携程/飞猪），现场基本不提供窗口售票 —— <b>提前一天订好</b>。</li>
+        <li class="mid">公开福利：4–10 月非法定节假日的周五大门票免费（只买船票）。<b>11 月不适用</b>，看你这个月就用不上。</li>
+      </ul>
+    </div>
+  </div>
+
+  <h3>那"跟团"要不要报？</h3>
+
+  <div class="note purple">
+    <span class="t">结论：不报整日团，但可以只买"船票 + 讲解 + 缆车"这半边</span>
+    <p>千岛湖的"跟团"主流是<b>杭州出发的一日游大巴团</b>，它的价值全在<b>交通 + 门票 + 导游</b>三件事上。你自驾来，<b>交通那半边的钱等于白花</b>；剩下的门票和船票自己线上订一样能拿到。</p>
+    <p><b>唯一的例外</b>：如果你不想自己抢船票、研究冬季班次、算岛与岛之间的时间，可以单订一个<b>"当地码头集合的半日游船团"</b>（含门票+船票+梅峰岛缆车+导游），把湖区那半天交出去，其余自驾。</p>
+  </div>
+
+  <p>真要报团，下单前把这<b>三句话直接发给客服</b>，答不实就别买：</p>
+  <ul class="tight">
+    <li class="hit"><b>"有没有安排购物店或特产展示？全程能不能不进店？"</b></li>
+    <li class="hit"><b>"船票、岛上门票、景区交通是否全部包含？还有什么必须自费的项目？"</b></li>
+    <li class="hit"><b>"每个岛大概停多久？会不会为了赶行程玩得很匆忙？"</b></li>
+    <li class="miss"><b>对方若用"正常""很宽松""到时候听导游安排"这类模糊话术带过 —— 直接换下一家。</b>已知的坑：低价团压缩游船时间、半小时闪现一个岛；不含午餐的团容易被带到指定餐馆消费。</li>
+  </ul>
+</section>
+
+<!-- ============ 8. 自驾 ============ -->
+<section>
+  <div class="sec-head">
+    <h2>自驾相关</h2>
+    <p class="lede">你自驾，这条改变了两家的权重 —— 请看第一句。</p>
+  </div>
+
+  <div class="card">
+    <ul class="tight">
+      <li class="hit"><b>自驾把"位置"这条判据降权了。</b>可人离中心湖区远、明豪在 C 位，开车只差十来分钟 —— 但可人离镇的绝对距离仍会体现为"想吃鱼街就得开车出去"。</li>
+      <li class="hit"><b>宁波 → 千岛湖约 315km / 3.5–4 小时</b>（杭甬高速 → 杭州绕城 → 杭新景高速）。11/25 周三出发，避开周末堵。</li>
+      <li class="hit">酒店多有<b>免费停车 + 充电桩</b>：明豪、可人、喜来登、滨江希尔顿均标"充电车位 / 充电桩"。</li>
+      <li class="hit"><b>环湖自驾是千岛湖的招牌</b>（不是骑行）—— 千汾线最贴湖、淳杨线最壮观、千威线最适合看日落；观景台都有免费车位。<b>行车提醒：限速 40–60km/h、临水弯道多，8 岁和 10 岁出发前吃晕车药。</b></li>
+      <li class="mid">不自驾的话：高铁站 → 湖区穿梭巴士 15 元 / 45 分钟，<b>8:00 开班、17:00 收班</b>，明豪另有接驳大巴 15 元/人。</li>
+      <li class="miss"><b>宁波 → 千岛湖 G9318 直达 2h30 只在周末和节假日开行</b>，11/25 是周三，按这条线大概率要杭州中转 —— 自驾的话这条可以忽略。</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ============ 9. 电话 ============ -->
+<section>
+  <div class="sec-head">
+    <h2>下单前要打电话确认的事</h2>
+    <p class="lede">这几条会真实影响体验，而且平台页面上的口径是互相打架的。</p>
+  </div>
+
+  <div class="grid g2">
+    <div class="card">
+      <h4>明豪国际 · 0571-56026666</h4>
+      <ul class="tight">
+        <li>室内乐园到底是<b>免费还是收费</b> —— 同程标"收费"、携程与游记说"住客免费（含 2 大 2 小畅玩）"，两个口径打架，必须问清</li>
+        <li><b>沐屿汤泉 11 月的运营时间和是否需另付费</b>（官网写"以酒店安排为准"）</li>
+        <li>室内恒温泳池全年开放吗？户外水上乐园 10 月前开放 —— 11 月底肯定关了，确认室内那个正常</li>
+        <li><b>11/25–27 的套餐还卖不卖</b>（3天2晚 ¥1299 是上一季口径，要新一期的）</li>
+        <li>"设施磨损"—— 有实测文提到，但官网写 2022 年 7 月开业（也有资料说更早）。<b>要最新实拍图</b></li>
+      </ul>
+    </div>
+
+    <div class="card rival">
+      <h4>可人·千岛湖 · 0571-29906666</h4>
+      <ul class="tight">
+        <li><b>11 月游艇环湖还开不开</b> —— 是不是入住就送、要不要提前跟管家预约船期、风大停航怎么补偿</li>
+        <li><b>9 座岛的登岛通道 11 月是否全开</b>（吊桥、勇敢者道路、果园、动物农场），果园 11 月底还有没有可采摘的</li>
+        <li>孩子能玩的项目里，<b>有没有"室内兜底"清单</b> —— 万一连下两天雨，除了泡汤和书吧还有什么</li>
+        <li>想住的<b>131㎡ 双卧家庭套房有几间、11/25–27 有没有</b>（这类套房通常存量极少）</li>
+        <li>差评提到的<b>隔音</b>问题集中在哪些房型，能否指定安静房</li>
+        <li>儿童乐园是<b>免费</b>吗（同程标"儿童乐园免费"）</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h4>洲至奢选燕山</h4>
+      <ul class="tight">
+        <li>室内儿童乐园与儿童俱乐部的<b>开放时段与年龄限制</b></li>
+        <li>LOFT 亲子滑梯房 / B.Duck 套房的<b>11 月加价幅度</b></li>
+        <li>儿童泳池与水上滑梯<b>是否为室内</b>（决定 11 月能不能用）</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h4>绿城系（喜来登 0571-64888888 / 度假 0571-65088888）</h4>
+      <ul class="tight">
+        <li><b>室内恒温泳池 11 月是否正常开放</b>（喜来登的水上乐园是户外，冬季关，别搞混）</li>
+        <li>绿城度假：锁定房型在 <b>1 号楼</b>，并确认湖景朝向（大湖面还是小湖面）</li>
+        <li>喜乐梦之岛儿童乐园<b>规模有多大、是否免费</b></li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h4>Club Med · 0571-65018888（若仍考虑）</h4>
+      <ul class="tight">
+        <li><b>2 大 2 小比 2 大 1 小加多少钱</b>（所有套餐都按"2 大 1 小"设计）</li>
+        <li><b>10 岁能不能进迷你俱乐部</b>（4–10 岁上限，卡边）</li>
+        <li><b>哪些项目还要另外收费</b> —— 攀岩、瑜伽、大堂活动，一条条问，别听到"一价全包"就下单</li>
+        <li>能否指定<b>别墅 / 山居房型、避开主楼标间</b>（隔音）</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h4>开元度假村</h4>
+      <ul class="tight">
+        <li>森泊焕境乐园<b>哪些是室内、哪些画在户外</b>（室内部分决定 11 月可用度）</li>
+        <li>房型<b>是否近期翻新过</b>（老牌酒店房型偏旧是主要短板）</li>
+        <li>乐园票<b>是否含在房价里</b></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 10. 口径 ============ -->
+<section>
+  <div class="sec-head">
+    <h2>几句实话 &amp; 数据口径</h2>
+  </div>
+
+  <div class="card">
+    <ul class="tight">
+      <li class="hit"><b>评分不代表 11 月体感。</b>Club Med 4.6 分照样出局，因为它押注的户外价值正好是你用不上的季节。反过来，可人 4.8 分但差评里"价格与体验不符"这条，恰恰指向它冬季的短板。</li>
+      <li class="hit"><b>平台评分要交叉看。</b>可人在携程 4.8（510 条）、Trip.com 9.7/10（644 条）、<b>美团只有 4.4</b> —— 三个平台的样本群不同，差距本身就说明它的体验分化明显（喜欢的极喜欢，觉得贵的很不满）。</li>
+      <li class="mid"><b>"起价"不等于你的实付。</b>明豪起价 ¥859–1033，但套餐口径折算下来 ¥649/晚含早含乐园票 —— <b>套餐永远比裸房价划算</b>，优先找含乐园票的套餐。</li>
+      <li class="mid">所有价格为 2026 年 9 月查得的公开报价，<b>11 月实际以平台下单页为准</b>；明豪 ¥1299 套餐、Club Med 促销均为上一季口径，需等新一期放出。</li>
+      <li class="mid">点评数为携程口径；评分四舍五入到小数点后一位。<b>可人 510 条、洲至奢选约 1500 条的样本量偏小，统计稳定性弱于明豪（2.2 万条）与开元（1.05 万条）。</b></li>
+      <li class="miss">本文剔除的：曾厝垵式的纯网红民宿、无室内亲子设施的中端酒店、以及把"森泊"当作恒温室内水乐园来卖的宣传（<b>千岛湖森泊没有室内水乐园，只有户外水寨</b>）。</li>
+    </ul>
+  </div>
+
+  <div class="note red">
+    <span class="t">仍然存在、且未见更新的那个坑</span>
+    <p><b>千岛湖的"森泊"不是那个四季恒温室内水乐园。</b>"森泊＝全年恒温室内水乐园"说的是<b>杭州湘湖森泊</b>和<b>莫干山森泊（德清）</b>；千岛湖开元森泊焕境乐园只有<b>户外</b>欢乐水寨，冬季关闭。要玩水，要么靠明豪 / 喜来登的<b>室内恒温泳池</b>，要么靠<b>温泉</b>。订之前打 0571-65018888 确认。</p>
+  </div>
+</section>
+
+<footer>
+  <p>数据来源：携程 / 同程 / 美团 / Trip.com 酒店详情页与点评、携程榜单（2026 全球 100 亲子乐园酒店、淳安豪华酒店榜、浙江亲子乐园酒店榜）、各家官方与套餐页、什么值得买与穷游系实测文、酒店官网设施清单。采集时间 2026-09-26/27。</p>
+  <p>用途：宁波秋假 2026-11-25 至 11-29 家庭出游（2 大 2 小，8 岁 + 10 岁）住宿比选。价格与设施以出行前平台下单页与酒店前台口径为准。</p>
+</footer>
+
+</div>
+</body>
+</html>

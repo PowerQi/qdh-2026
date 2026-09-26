@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>千岛湖 + 义乌 · 3 天 2 晚亲子行程</title>
+<style>
+:root{
+  --bg:#F7F6F3; --card:#FFFFFF; --ink:#1F1E1C; --ink2:#5F5E5A; --ink3:#8A8880;
+  --line:#E4E2DB; --line2:#CFCCC2;
+  --blue:#185FA5; --blue-bg:#E6F1FB; --blue-bd:#B5D4F4;
+  --green:#3B6D11; --green-bg:#EAF3DE; --green-bd:#C0DD97;
+  --amber:#854F0B; --amber-bg:#FAEEDA; --amber-bd:#FAC775;
+  --red:#A32D2D; --red-bg:#FCEBEB; --red-bd:#F7C1C1;
+  --purple:#534AB7; --purple-bg:#EEEDFE; --purple-bd:#AFA9EC;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);
+  font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;
+  font-size:15px;line-height:1.68;-webkit-font-smoothing:antialiased}
+.wrap{max-width:1080px;margin:0 auto;padding:44px 24px 90px}
+h1{font-size:28px;font-weight:600;margin:0 0 8px;letter-spacing:-.3px}
+h2{font-size:19px;font-weight:600;margin:0 0 6px}
+h3{font-size:16px;font-weight:600;margin:0 0 4px}
+h4{font-size:14px;font-weight:600;margin:0 0 4px}
+p{margin:0 0 10px}
+.sub{color:var(--ink2);font-size:14px;margin:0}
+.lede{color:var(--ink2);font-size:14px;margin:6px 0 0}
+section{margin-top:46px}
+.sec-head{border-bottom:2px solid var(--ink);padding-bottom:10px;margin-bottom:20px}
+.sec-head h2{margin:0 0 4px}
+.sec-head .lede{margin:0}
+.meta{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0 0}
+.chip{background:#fff;border:1px solid var(--line);border-radius:999px;
+  padding:4px 12px;font-size:13px;color:var(--ink2)}
+.chip b{color:var(--ink);font-weight:600}
+
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:20px 22px;margin-bottom:16px}
+.card.hero{border:2px solid var(--blue-bd)}
+.card.dim{background:#FCFBF9}
+.grid{display:grid;gap:16px}
+.g3{grid-template-columns:repeat(3,1fr)}
+.g2{grid-template-columns:repeat(2,1fr)}
+@media(max-width:860px){.g3,.g2{grid-template-columns:1fr}}
+
+.tag{display:inline-block;font-size:12px;padding:3px 10px;border-radius:999px;
+  background:#F1EFE8;color:var(--ink2);font-weight:500;margin-bottom:10px}
+.tag.best{background:var(--blue-bg);color:var(--blue)}
+.tag.val{background:var(--green-bg);color:var(--green)}
+.tag.warn{background:var(--amber-bg);color:var(--amber)}
+.tag.bad{background:var(--red-bg);color:var(--red)}
+
+ul{margin:0 0 12px;padding-left:0;list-style:none}
+li{position:relative;padding-left:16px;margin-bottom:6px;font-size:14px;line-height:1.6}
+li::before{content:"";position:absolute;left:2px;top:.62em;width:5px;height:5px;
+  border-radius:50%;background:var(--line2)}
+li.hit::before{background:var(--green)}
+li.miss::before{background:var(--red)}
+li.mid::before{background:var(--amber)}
+li b{font-weight:600}
+ul.tight li{margin-bottom:4px}
+
+table{width:100%;border-collapse:collapse;font-size:13.5px;background:#fff;
+  border:1px solid var(--line);border-radius:12px;overflow:hidden}
+th,td{padding:11px 12px;text-align:left;border-bottom:1px solid var(--line);vertical-align:top}
+th{background:#F1EFE8;font-weight:600;font-size:13px;color:var(--ink2);white-space:nowrap}
+tr:last-child td{border-bottom:none}
+td.num{font-variant-numeric:tabular-nums;white-space:nowrap}
+td.c{text-align:center}
+.tbl-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch}
+tr.hi td{background:var(--blue-bg)}
+tr.lo td{background:#FCFBF9;color:var(--ink2)}
+
+.note{background:var(--amber-bg);border:1px solid var(--amber-bd);border-radius:12px;
+  padding:16px 18px;font-size:14px;margin:16px 0}
+.note.red{background:var(--red-bg);border-color:var(--red-bd)}
+.note.green{background:var(--green-bg);border-color:var(--green-bd)}
+.note.blue{background:var(--blue-bg);border-color:var(--blue-bd)}
+.note.purple{background:var(--purple-bg);border-color:var(--purple-bd)}
+.note b{font-weight:600}
+.note p:last-child{margin-bottom:0}
+.note .t{font-weight:600;margin-bottom:6px;display:block}
+
+/* 日程 */
+.dayblock{background:#fff;border:1px solid var(--line);border-radius:14px;overflow:hidden;margin-bottom:18px}
+.dayblock .hd{display:flex;align-items:center;gap:14px;padding:14px 20px;background:#F1EFE8;border-bottom:1px solid var(--line)}
+.dayblock .hd .dnum{width:38px;height:38px;border-radius:10px;background:var(--ink);color:#fff;
+  display:flex;align-items:center;justify-content:center;font-size:16px;font-weight:600;flex:none}
+.dayblock .hd .dt{font-size:16px;font-weight:600}
+.dayblock .hd .dd{font-size:12.5px;color:var(--ink2)}
+.dayblock .hd .rt{margin-left:auto;font-size:12.5px;color:var(--ink2);text-align:right}
+.dayblock .bd{padding:16px 20px 8px}
+.dayblock.d3 .hd{background:var(--purple-bg);border-bottom-color:var(--purple-bd)}
+.dayblock.d3 .hd .dnum{background:var(--purple)}
+
+.sch{list-style:none;margin:0;padding:0}
+.sch li{display:grid;grid-template-columns:78px 1fr;gap:14px;padding:9px 0;
+  border-bottom:1px dashed var(--line);font-size:14px;padding-left:0;margin:0}
+.sch li:last-child{border-bottom:none}
+.sch li::before{display:none}
+.sch .tm{color:var(--ink3);font-variant-numeric:tabular-nums;font-size:13px;font-weight:600;padding-top:1px}
+.sch .tx b{font-weight:600}
+.sch .tx .sm{display:block;font-size:12.5px;color:var(--ink3);margin-top:1px}
+.sch .tx .notein{display:inline-block;font-size:11.5px;background:var(--amber-bg);color:var(--amber);
+  border-radius:6px;padding:1px 7px;margin-left:6px;vertical-align:1px}
+.sch .tx .notein.g{background:var(--green-bg);color:var(--green)}
+.sch .tx .notein.b{background:var(--blue-bg);color:var(--blue)}
+
+.stars{font-size:12px;color:var(--ink3);letter-spacing:.06em;font-weight:600;margin-bottom:4px}
+.sname{font-size:16.5px;font-weight:600;margin:0 0 3px}
+.sdesc{font-size:13px;color:var(--ink3);margin:0 0 12px}
+
+.zh{font-size:12px;color:var(--ink3)}
+.foot{margin-top:56px;padding-top:18px;border-top:1px solid var(--line);font-size:12.5px;color:var(--ink3)}
+.foot p{margin:0 0 6px}
+
+/* ===== 手机端适配（自动注入） ===== */
+.tw{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:0 0 14px}
+.tw table{margin:0}
+@media(max-width:720px){
+  body{font-size:15px}
+  .wrap{padding:20px 14px 88px}
+  h1{font-size:22px;line-height:1.34;letter-spacing:-.2px}
+  h2{font-size:17.5px;line-height:1.4}
+  section{margin-top:30px}
+  .sec-head{padding-bottom:8px;margin-bottom:16px}
+  .body{padding:15px 15px 17px}
+  .card{margin-bottom:18px;border-radius:14px}
+  table{font-size:12.6px}
+  th{white-space:normal}
+  th,td{padding:7px 8px}
+  .photos.p3{grid-template-columns:repeat(2,1fr)}
+  .photos.p3 a:nth-child(3){display:block}
+  .timeline{grid-template-columns:repeat(2,1fr)}
+  .lede,.sub{font-size:13.6px}
+}
+@media(max-width:400px){
+  .wrap{padding:16px 11px 84px}
+  h1{font-size:20px}
+  table{font-size:12px}
+  th,td{padding:6px 6px}
+}
+</style>
+<meta name="robots" content="noindex,nofollow,noarchive">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="apple-mobile-web-app-title" content="千岛湖行程">
+<meta name="theme-color" content="#F7F6F3">
+<meta name="format-detection" content="telephone=no">
+</head>
+<body>
+<div class="wrap">
+
+<h1>千岛湖 + 义乌 · 3 天 2 晚亲子行程</h1>
+<p class="sub">宁波出发 · 自驾 · 2 个孩子（8 岁 / 10 岁）· 休闲为主，只走最经典的点</p>
+<div class="meta">
+  <span class="chip">建议日期 <b>11/25（周三）→ 11/27（周五）</b></span>
+  <span class="chip">总里程 <b>约 664 km</b></span>
+  <span class="chip">纯驾驶 <b>约 9 小时</b></span>
+  <span class="chip">住 <b>2 晚</b></span>
+</div>
+
+<!-- ============ 0. 硬约束 ============ -->
+<section>
+  <div class="note red">
+    <span class="t">△ 先看这一条：日期不能随便挪</span>
+    <p><b>义乌国际商贸城周一至周六 9:00–17:00 营业，周日全域休市。</b>你第三天要逛市场，所以<b>返程日绝不能是周日</b>。</p>
+    <p>秋假 11/25–29 这五天里，只有 <b>11/25（周三）出发 → 11/27（周五）返</b> 这一组能同时满足三件事：D3 是周五（市场开门）、两晚全在周中（房价最低）、周末留在家收心。如果你排成 11/27–11/29，<b>D3 正好是周日，那半天直接作废。</b></p>
+  </div>
+</section>
+
+<!-- ============ 1. 总览 ============ -->
+<section>
+  <div class="sec-head">
+    <h2>行程总览</h2>
+    <p class="lede">把 2 个完整日给千岛湖，第 3 天上午开去义乌、逛半天市场、傍晚到家。</p>
+  </div>
+
+  <div class="grid g3">
+    <div class="card">
+      <div class="stars">D1 · 11/25 周三</div>
+      <p class="sname">宁波 → 千岛湖</p>
+      <p class="sdesc">315 km · 3.5–4 h</p>
+      <ul class="tight">
+        <li class="hit">午后到镇，先吃鱼头</li>
+        <li class="hit">下午泡酒店室内设施</li>
+        <li class="hit">傍晚天屿山看日落</li>
+      </ul>
+    </div>
+    <div class="card">
+      <div class="stars">D2 · 11/26 周四</div>
+      <p class="sname">中心湖区游船</p>
+      <p class="sdesc">全天 · 千岛湖第一经典</p>
+      <ul class="tight">
+        <li class="hit">上午登船，梅峰岛 + 渔乐岛 + 月光岛</li>
+        <li class="mid">船程 5–6 h，占掉大半天</li>
+        <li class="hit">回酒店午休 + 汤泉</li>
+      </ul>
+    </div>
+    <div class="card">
+      <div class="stars">D3 · 11/27 周五</div>
+      <p class="sname">千岛湖 → 义乌 → 宁波</p>
+      <p class="sdesc">165 km + 184 km · 5.5 h</p>
+      <ul class="tight">
+        <li class="hit">上午开到义乌，正好市场全开</li>
+        <li class="hit">10:30–15:30 逛半天</li>
+        <li class="hit">18:15 前后到家</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="note green">
+    <span class="t">好消息：绕义乌几乎不绕路</span>
+    <p>直接回宁波是 315 km，<b>经义乌是 349 km —— 只多约 34 km、半小时</b>。义乌正好卡在千岛湖和宁波之间偏南，等于顺路把半天市场逛了。</p>
+  </div>
+</section>
+
+<!-- ============ 2. 逐日 ============ -->
+<section>
+  <div class="sec-head">
+    <h2>逐日安排</h2>
+    <p class="lede">时间点按 11 月底天黑（约 17:05）倒推，每天只有一个主线项目。</p>
+  </div>
+
+  <!-- D1 -->
+  <div class="dayblock">
+    <div class="hd">
+      <div class="dnum">D1</div>
+      <div>
+        <div class="dt">宁波 → 千岛湖镇</div>
+        <div class="dd">11/25 周三 · 315 km / 3.5–4 h · 不排景点，只赶路 + 泡酒店</div>
+      </div>
+      <div class="rt">日落 17:05</div>
+    </div>
+    <div class="bd">
+      <ul class="sch">
+        <li><span class="tm">07:30</span><span class="tx"><b>宁波出发</b>（甬金高速 → 杭新景高速），中途服务区休息 1 次、15 分钟<span class="sm">全程 4 小时左右，赶上 11:30 到镇</span></span></li>
+        <li><span class="tm">11:40</span><span class="tx"><b>抵千岛湖镇 · 午餐吃鱼头</b><span class="sm">镇上老馆子人均 80–120；招牌就是有机鱼头汤，第一顿吃它</span></span></li>
+        <li><span class="tm">13:30</span><span class="tx"><b>入住酒店，先放行李</b><span class="sm">推荐明豪国际（室内 3000㎡ 星屿童趣王国 + 沐屿汤泉 + 室内恒温泳池，步行 8 分钟到鱼街）。另有洲至奢选燕山、开元度假村可替换</span></span></li>
+        <li><span class="tm">14:00</span><span class="tx"><b>酒店内玩，不出门</b><span class="sm">孩子室内乐园放电，大人补个觉 —— 上午开了 4 小时车，这一段必须留</span></span></li>
+        <li><span class="tm">16:40</span><span class="tx"><b>出发天屿山观景台</b><span class="sm">观光扶梯上山，350 米长、提升 120 米，孩子不用爬山。¥45 起</span></span></li>
+        <li><span class="tm">17:00</span><span class="tx"><b>天屿山看日落</b><span class="sm">山顶俯瞰湖面、岛屿、城区、大桥，是千岛湖最标准的「明信片机位」<span class="notein b">本日唯一景点</span></span></span></li>
+        <li><span class="tm">18:30</span><span class="tx"><b>回镇上晚餐</b><span class="sm">鱼街一带吃晚饭</span></span></li>
+        <li><span class="tm">20:00</span><span class="tx"><b>沐屿汤泉泡汤，早睡</b><span class="sm">为 D2 一整天养精神</span></span></li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- D2 -->
+  <div class="dayblock">
+    <div class="hd">
+      <div class="dnum">D2</div>
+      <div>
+        <div class="dt">中心湖区游船</div>
+        <div class="dd">11/26 周四 · 全天 · 千岛湖唯一「自驾到不了」的部分</div>
+      </div>
+      <div class="rt">船程 5–6 h</div>
+    </div>
+    <div class="bd">
+      <ul class="sch">
+        <li><span class="tm">07:20</span><span class="tx"><b>出发去中心湖区旅游码头</b><span class="sm">车停码头停车场</span></span></li>
+        <li><span class="tm">08:00–09:00</span><span class="tx"><b>取票登船</b><span class="notein">冬季班次 · 首选时段</span><span class="sm">冬季（11/1–次年 3/31）只有三档取票时间：08:00–09:00 / 09:30–10:30 / 12:00–13:00。<b>选前两档</b>——12:00 那档少一个岛，回来就天黑了</span></span></li>
+        <li><span class="tm">09:00–14:30</span><span class="tx"><b>游船：梅峰岛 → 渔乐岛 → 月光岛</b><span class="sm">梅峰岛是千岛湖的封面（登顶俯瞰 300 余岛）；渔乐岛喂鱼、月光岛看锁</span></span></li>
+        <li><span class="tm">12:00</span><span class="tx"><b>午餐在船上或岛上解决</b><span class="sm">船上餐饮偏贵，可以自带上岛<span class="notein">淡季自备更从容</span></span></span></li>
+        <li><span class="tm">15:00</span><span class="tx"><b>回码头 → 回酒店</b></span></li>
+        <li><span class="tm">15:20–17:00</span><span class="tx"><b>午休断电</b><span class="sm">上午船上摇了大半天，这一段是必须的，别硬排</span></span></li>
+        <li><span class="tm">17:00</span><span class="tx"><b>酒店收尾：汤泉 / 恒温泳池 / 室内乐园</b><span class="sm">孩子继续玩，大人泡汤 —— 千岛湖的休闲就落在这个下午</span></span></li>
+        <li><span class="tm">18:30</span><span class="tx"><b>晚餐 + 收拾行李</b></span></li>
+      </ul>
+
+      <div class="note blue">
+        <span class="t">游船的两条钱上提醒</span>
+        <p><b>① 你的日期卡在旺季尾巴。</b>中心湖区套票旺季（3.1–11.30）<b>¥195</b>（大门票 130 + 船票 65，<b>船票强制、不能只买门票</b>）；<b>12 月才降到 ¥175</b> —— 你正好差几天。</p>
+        <p><b>② 梅峰岛缆车往返 ¥60 是自费的。</b>孩子爬不动就直接买，别省这个钱。儿童 1.2m（含）–1.5m（不含）买儿童票，<b>带好证件</b>。</p>
+        <p>另外：中心湖区和东南湖区的码头不互通、船票不通用，<b>一天只能选一个湖区</b>，别想上午一个下午一个。</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- D3 -->
+  <div class="dayblock d3">
+    <div class="hd">
+      <div class="dnum">D3</div>
+      <div>
+        <div class="dt">千岛湖 → 义乌 → 宁波</div>
+        <div class="dd">11/27 周五 · 165 km + 184 km · 只在义乌停半天</div>
+      </div>
+      <div class="rt">逛市场 5 h</div>
+    </div>
+    <div class="bd">
+      <ul class="sch">
+        <li><span class="tm">07:30</span><span class="tx"><b>退房出发去义乌</b>（杭新景高速 → 龙游 → G60 杭金衢）<span class="sm">约 165 km / 2.5–3 h</span></span></li>
+        <li><span class="tm">10:15</span><span class="tx"><b>抵义乌国际商贸城，停五区停车场</b><span class="sm">五区南广场停车场 2 小时内免费。停好后坐市场<b>免费接驳车</b>到一区</span></span></li>
+        <li><span class="tm">10:30–15:30</span><span class="tx"><b>逛市场，半天走精华动线</b><span class="notein g">本日主线</span><span class="sm">一区东扩四楼（零售饰品、潮玩）→ 三区一楼（文具、手账）→ 四区（日用百货、袜子）→ 五区（进口馆 + 吃饭）</span></span></li>
+        <li><span class="tm">12:00</span><span class="tx"><b>午餐在五区餐饮区</b>（正好逛到一半）</span></li>
+        <li><span class="tm">15:30</span><span class="tx"><b>五区取车，出发回宁波</b>（甬金高速）<span class="sm">约 184 km / 2.75 h</span></span></li>
+        <li><span class="tm">18:15</span><span class="tx"><b>到家</b><span class="sm">周五晚到家，周末在家收心、写作业，周一正常上学</span></span></li>
+      </ul>
+
+      <div class="note">
+        <span class="t">时间够不够？够，但别再压缩</span>
+        <p>D3 纯开车 5.5 小时、逛 5 小时，一共 11 小时在外。<b>如果孩子累了，砍到 4 小时（15:30 提前到 14:30 走），17:15 到家</b>，这样更稳。市场 10 点后才全开，所以你 10:30 到其实是刚好，再早也是等。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 3. 千岛湖只留什么 ============ -->
+<section>
+  <div class="sec-head">
+    <h2>千岛湖：只留 3 样，其余全部砍掉</h2>
+    <p class="lede">你说休闲为主、只要最经典的。我把之前那份内容清单压到只剩三件——其余（自驾环湖、芹川古村、啤酒小镇、博物馆）这趟都不排。</p>
+  </div>
+
+  <div class="tbl-wrap">
+  <div class="tw"><table>
+    <thead>
+      <tr><th style="width:150px">保留</th><th>为什么它是最经典的</th><th style="width:96px">时间成本</th></tr>
+    </thead>
+    <tbody>
+      <tr class="hi">
+        <td><b>① 中心湖区游船</b></td>
+        <td>千岛湖的招牌，也是<b>唯一自驾到不了的部分</b>。不上船，等于没来过千岛湖。梅峰岛登顶那一眼是全场最高光</td>
+        <td class="num">5–6 h</td>
+      </tr>
+      <tr class="hi">
+        <td><b>② 天屿山日落</b></td>
+        <td>扶梯上山不费腿，山顶把湖面 / 岛屿 / 城区 / 大桥一次收齐，是「标准机位」</td>
+        <td class="num">1.5 h</td>
+      </tr>
+      <tr class="hi">
+        <td><b>③ 千岛湖鱼头</b></td>
+        <td>本地招牌，全镇都在做。带娃出行里少有的「大人小孩都满意」的一餐</td>
+        <td class="num">1 h ×2 顿</td>
+      </tr>
+    </tbody>
+  </table></div>
+  </div>
+
+  <div class="note purple">
+    <span class="t">唯一的季节加项：红叶湾（想去就当顺路 30 分钟）</span>
+    <p><b>距千岛湖镇 15 km / 驱车 25 分钟，无门票、有免费车位</b>，导航「红叶湾观景台」即可。红叶最佳期是 <b>11 月中下旬到 12 月初</b>，正好卡在你的窗口。</p>
+    <p>但它<b>在镇北的千汾线上，和 D3 去义乌的方向相反</b>，所以只能塞进 D1 或 D2：<b>D1 如果 11:00 前就到镇，可以先去再看日落；D2 游船回来太累就别去。</b>两个条件都不满足，就直接砍掉——它是加分项，不是必需项。</p>
+  </div>
+
+  <div class="note blue">
+    <span class="t">雨天预案（11 月降水是全年第二少的月份，概率不高，但备着）</span>
+    <p>游船照开，只是观景打折 → 把 D2 的天屿山换成酒店汤泉；如果整天大雨，室内兜底有 <b>淳安博物馆（免费、周一闭馆）</b>、<b>千岛湖自然博物馆（恐龙化石、中华龙鸟）</b>，加上明豪那 3000㎡ 室内乐园，足够耗掉一个下午。</p>
+  </div>
+</section>
+
+<!-- ============ 4. 义乌半天 ============ -->
+<section>
+  <div class="sec-head">
+    <h2>义乌那半天：怎么逛才不白来</h2>
+    <p class="lede">国际商贸城是批发的天下，逛法和逛商场完全不一样。半天只够走一条动线，别贪。</p>
+  </div>
+
+  <div class="grid g2">
+    <div class="card">
+      <div class="tag best">营业时间</div>
+      <ul class="tight">
+        <li class="hit"><b>周一至周六 9:00–17:00</b></li>
+        <li class="miss"><b>周日全域休市</b> —— 这是选日期的第一约束</li>
+        <li class="mid"><b>9 点前很多店没开，10 点后才陆续全开</b> → 你 10:30 到正好</li>
+        <li class="mid">晚上商户关门，别指望晚上来</li>
+      </ul>
+    </div>
+    <div class="card">
+      <div class="tag val">半天动线（单向不回头）</div>
+      <ul class="tight">
+        <li><b>一区东扩四楼</b>：零售饰品、潮玩 <span class="zh">（唯一可砍价的区）</span></li>
+        <li><b>三区一楼</b>：文具、手账</li>
+        <li><b>四区</b>：日用百货、袜子、内衣</li>
+        <li><b>五区</b>：进口馆 —— <b>零食、母婴、洗护，支持单件零售</b>，孩子最爱的在这里</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="grid g2">
+    <div class="card">
+      <div class="tag warn">进店怎么说（决定你会不会被宰）</div>
+      <ul class="tight">
+        <li class="miss">别问「这个多少钱一个」—— 一听就是游客，直接报高价</li>
+        <li class="hit">要问：<b>「零卖什么价？」「混批怎么算？」「有现货吗？」</b></li>
+        <li>称呼统一叫「<b>老板</b>」</li>
+        <li><b>同款至少比 3 家</b> —— 同款货遍地都是，差价常能到 30%</li>
+        <li>一区饰品玩具可砍（心理价约标价 ÷2 再 +10%）；<b>五区进口馆、四区品牌袜业是明码标价，别硬砍</b>，那是零售价</li>
+      </ul>
+    </div>
+    <div class="card">
+      <div class="tag">省力三件事</div>
+      <ul class="tight">
+        <li class="hit"><b>让店家包邮发货</b> —— 所有店铺都能发快递，不用手提大包小包</li>
+        <li class="hit"><b>穿平底鞋</b> —— 市场日均上万步，这是半天里最实际的一条</li>
+        <li><b>车停五区</b>，坐免费接驳车到一区，逛完正好回到五区取车</li>
+        <li>停车很便宜：一区 / 五区南广场 / G 区地面<b>都是 2 小时内免费</b></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="note red">
+    <span class="t">避坑：这四件事别做</span>
+    <p><b>① 别信门口拉客的</b> —— 说带你找货、拿低价的，基本都是中介，容易被坑。<br>
+    <b>② 别随意拍照</b> —— 大部分店铺禁止拍图拍价，想拍先问一句。<br>
+    <b>③ 别指望单件都卖</b> —— 大多数档口 <b>5–10 件起批</b>，想买单品集中在<b>五区进口馆</b>。<br>
+    <b>④ 别在第一家下单</b> —— 先走完动线、心里有数，回头再买。</p>
+  </div>
+
+  <div class="note">
+    <span class="t">带孩子的实话</span>
+    <p>商贸城对 8 岁 / 10 岁的吸引力其实一般——它是批发市场，不是商场。<b>真正能让孩子待得住的是五区进口食品区</b>（各种进口零食），所以把五区<u>放在动线最后、正好吃饭</u>，孩子的耐心刚好撑到那儿。前三个区以大人逛为主。</p>
+  </div>
+</section>
+
+<!-- ============ 5. 里程账 ============ -->
+<section>
+  <div class="sec-head">
+    <h2>里程与耗时总账</h2>
+    <p class="lede">三个数字决定这个方案成不成立。</p>
+  </div>
+
+  <div class="tbl-wrap">
+  <div class="tw"><table>
+    <thead>
+      <tr><th>路段</th><th style="width:110px">里程</th><th style="width:110px">纯驾驶</th><th>走哪条高速</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>宁波 → 千岛湖镇</td><td class="num">约 315 km</td><td class="num">3.5–4 h</td><td>甬金高速 → 杭新景高速</td></tr>
+      <tr><td>千岛湖镇 → 义乌</td><td class="num">约 165 km</td><td class="num">2.5–3 h</td><td>杭新景高速 → 龙游 → G60 杭金衢</td></tr>
+      <tr><td>义乌 → 宁波</td><td class="num">约 184 km</td><td class="num">2.75 h</td><td>甬金高速</td></tr>
+      <tr class="hi"><td><b>合计</b></td><td class="num"><b>约 664 km</b></td><td class="num"><b>约 9 h</b></td><td>—</td></tr>
+      <tr class="lo"><td>对照：直接回宁波（不经义乌）</td><td class="num">630 km</td><td class="num">约 8.5 h</td><td>杭新景高速 → 甬金高速</td></tr>
+    </tbody>
+  </table></div>
+  </div>
+  <p class="lede" style="margin-top:10px">→ <b>经义乌只多约 34 km / 半小时</b>，等于白捡半天市场。这是这个方案能成立的根本原因。</p>
+</section>
+
+<!-- ============ 6. 订之前 ============ -->
+<section>
+  <div class="sec-head">
+    <h2>下单 / 出发前要确认的事</h2>
+    <p class="lede">按"不确认会出事"的顺序排。</p>
+  </div>
+
+  <div class="card">
+    <h3>① 先把日期锁死</h3>
+    <ul class="tight">
+      <li class="miss"><b>返程日不能是周日</b>（商贸城休市）→ 定 <b>11/25 三 → 11/27 五</b></li>
+      <li>周日至周四房价最便宜、周五周六跳价 → 这两晚全在周中，是最低价组合</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h3>② 酒店（三选一，都自驾友好）</h3>
+    <ul class="tight">
+      <li class="hit"><b>明豪国际 0571-56026666</b> —— 室内最强（3000㎡ 星屿童趣王国 + 沐屿汤泉 + 室内恒温泳池），步行 8 分钟到鱼街。要问：<b>室内儿童乐园到底免费还是收费</b>（平台两个口径打架）</li>
+      <li><b>洲至奢选千岛湖燕山</b> —— 最平衡，¥869 起，有儿童俱乐部 + 儿童泳池 + 家庭 LOFT 滑梯房</li>
+      <li><b>开元度假村</b> —— 明豪平替，¥508 起，超万平森泊焕境乐园；短板是房型偏旧</li>
+      <li class="mid">提醒：<b>11 月底室外泳池和水上项目全停</b>，选酒店只看室内设施，别被无边泳池宣传图影响</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h3>③ 游船</h3>
+    <ul class="tight">
+      <li>冬季三档取票：08:00–09:00（首选）/ 09:30–10:30（次选）/ 12:00–13:00（<b>别选</b>）</li>
+      <li>套票旺季 <b>¥195</b>（含强制船票 65），<b>12 月才降</b>；梅峰岛缆车 ¥60 自费</li>
+      <li>出发前查当日船班 —— 秋冬季部分班次会缩减、水上项目检修</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h3>④ 车与随身</h3>
+    <ul class="tight">
+      <li><b>晕车药</b>：千岛湖临水弯道多，出发前 30 分钟给孩子吃</li>
+      <li><b>常用药自带</b>：景区药房少且贵</li>
+      <li>义乌穿<b>平底鞋</b>；带个<b>手提袋</b>装货（大件直接让店家寄回宁波）</li>
+      <li>酒店多有免费停车 + 充电桩（明豪、燕山、喜来登均标充电车位）</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ============ 7. 口径 ============ -->
+<section>
+  <div class="sec-head">
+    <h2>实话与口径</h2>
+  </div>
+  <div class="card dim">
+    <ul class="tight">
+      <li><b>里程与耗时</b>为高速口径的公开数据，实际受路况影响，出发前用导航复核。</li>
+      <li><b>门票、船票价格</b>取自公开资料；旺季/淡季切换在 12/1，你的日期在旺季一侧。</li>
+      <li><b>酒店房价</b>是上一季公开口径，<b>2026 年 11 月要等 10–11 月新一期促销</b>，届时以实际报价为准。</li>
+      <li><b>商贸城营业时间</b>以官方口径为准（周一至周六 9:00–17:00，周日休市）；节假日前后可能有调整，出发前建议打一个电话确认。</li>
+      <li>本方案是「3 天 2 晚」的取舍版：<b>放弃了自驾环湖（千汾 / 淳杨线）、芹川古村、红叶湾以外的季节点</b>，换来 D3 半天的义乌。如果你更想多玩千岛湖，就回到 4 天 3 晚那条线。</li>
+    </ul>
+  </div>
+</section>
+
+<div class="foot">
+  <p>宁波秋假亲子游 · 千岛湖 + 义乌 3 天 2 晚行程 · 单文件、零外部依赖，可离线打开或打印</p>
+  <p>配套文档：《千岛湖酒店 · 明豪同档 9 家横评》—— 酒店逐项亮点、价格总账、下单前电话清单</p>
+</div>
+
+</div>
+</body>
+</html>

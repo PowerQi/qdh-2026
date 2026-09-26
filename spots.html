@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>千岛湖 · 被砍掉的那几个点，到底值不值得去</title>
+<style>
+:root{
+  --bg:#FBF6EF; --card:#FFFFFF; --ink:#22201D; --ink2:#5C5952; --ink3:#8C8880;
+  --line:#EAE2D6; --line2:#D6CCBC;
+  --amber:#8A5308; --amber-bg:#FCF3DF; --amber-bd:#EFD9A6;
+  --green:#35660E; --green-bg:#EDF5E1; --green-bd:#C4DD9B;
+  --red:#A02C2C; --red-bg:#FCECEA; --red-bd:#F5C4BE;
+  --blue:#17558F; --blue-bg:#E7F1FA; --blue-bd:#B7D4EE;
+  --purple:#4F45AC; --purple-bg:#EEEDFC; --purple-bd:#B0AAE8;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);
+  font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;
+  font-size:15px;line-height:1.7;-webkit-font-smoothing:antialiased}
+.wrap{max-width:980px;margin:0 auto;padding:44px 22px 90px}
+h1{font-size:29px;font-weight:700;margin:0 0 10px;letter-spacing:-.3px;line-height:1.32}
+h2{font-size:20px;font-weight:700;margin:0 0 6px}
+p{margin:0 0 10px}
+.sub{color:var(--ink2);font-size:14.5px;margin:0 0 6px}
+.lede{color:var(--ink2);font-size:14px;margin:6px 0 0}
+section{margin-top:44px}
+.sec-head{border-bottom:2px solid var(--ink);padding-bottom:10px;margin-bottom:22px}
+.sec-head h2{margin:0 0 4px}
+.sec-head .lede{margin:0}
+
+.card{background:var(--card);border:1px solid var(--line);border-radius:16px;
+  overflow:hidden;margin-bottom:26px;box-shadow:0 1px 3px rgba(80,60,30,.05)}
+.photos{display:grid;gap:3px;background:var(--line)}
+.photos.p3{grid-template-columns:repeat(3,1fr)}
+.photos.p2{grid-template-columns:repeat(2,1fr)}
+.photos a{display:block;aspect-ratio:4/3;overflow:hidden;background:#EFE9DE}
+.photos img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .35s}
+.photos a:hover img{transform:scale(1.04)}
+@media(max-width:640px){.photos.p3{grid-template-columns:repeat(2,1fr)}
+  .photos.p3 a:nth-child(3){display:none}}
+.body{padding:20px 24px 22px}
+.rank{display:inline-block;font-size:12px;font-weight:600;padding:4px 11px;border-radius:999px;
+  background:var(--amber-bg);color:var(--amber);margin-bottom:11px}
+.rank.a{background:var(--green-bg);color:var(--green)}
+.rank.b{background:var(--blue-bg);color:var(--blue)}
+.rank.c{background:var(--purple-bg);color:var(--purple)}
+.hook{font-size:16px;font-weight:600;color:var(--ink);margin:0 0 14px;line-height:1.55}
+.tags{display:flex;flex-wrap:wrap;gap:7px;margin:0 0 16px}
+.tags span{background:#F6F1E8;border:1px solid var(--line);border-radius:8px;
+  padding:4px 10px;font-size:12.5px;color:var(--ink2)}
+.sect{font-size:13px;font-weight:700;color:var(--ink3);letter-spacing:.04em;margin:18px 0 8px}
+ul{margin:0 0 12px;padding-left:0;list-style:none}
+li{position:relative;padding-left:17px;margin-bottom:7px;font-size:14.3px;line-height:1.65}
+li::before{content:"";position:absolute;left:2px;top:.66em;width:5px;height:5px;
+  border-radius:50%;background:var(--line2)}
+li b{font-weight:600}
+.quote{border-left:3px solid var(--line2);padding:3px 0 3px 14px;margin:14px 0;
+  font-size:14px;color:var(--ink2)}
+.quote .from{display:block;font-size:12px;color:var(--ink3);margin-top:4px}
+.warn{background:var(--red-bg);border:1px solid var(--red-bd);border-radius:11px;
+  padding:13px 15px;font-size:13.8px;margin:14px 0 0;color:#7A2222}
+.warn b{font-weight:600;color:var(--red)}
+.ok{background:var(--green-bg);border:1px solid var(--green-bd);border-radius:11px;
+  padding:13px 15px;font-size:13.8px;margin:10px 0 0;color:#2C5509}
+.ok b{font-weight:600;color:var(--green)}
+.block{background:#fff;border:1px solid var(--line);border-radius:14px;padding:18px 22px;margin-bottom:16px}
+
+table{width:100%;border-collapse:collapse;font-size:14px;background:#fff;
+  border:1px solid var(--line);border-radius:12px;overflow:hidden}
+th,td{padding:11px 13px;text-align:left;border-bottom:1px solid var(--line);vertical-align:top}
+th{background:#F6F1E8;font-weight:600;font-size:13px;color:var(--ink2);white-space:nowrap}
+tr:last-child td{border-bottom:none}
+.tbl-wrap{overflow-x:auto}
+
+.note{background:var(--amber-bg);border:1px solid var(--amber-bd);border-radius:12px;
+  padding:16px 18px;font-size:14px;margin:16px 0}
+.note.red{background:var(--red-bg);border-color:var(--red-bd)}
+.note.blue{background:var(--blue-bg);border-color:var(--blue-bd)}
+.note .t{font-weight:700;margin-bottom:6px;display:block}
+.note p:last-child{margin-bottom:0}
+
+.foot{margin-top:56px;padding-top:20px;border-top:1px solid var(--line);
+  font-size:12.5px;color:var(--ink3);line-height:1.75}
+.foot p{margin:0 0 7px}
+
+/* ===== 手机端适配（自动注入） ===== */
+.tw{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:0 0 14px}
+.tw table{margin:0}
+@media(max-width:720px){
+  body{font-size:15px}
+  .wrap{padding:20px 14px 88px}
+  h1{font-size:22px;line-height:1.34;letter-spacing:-.2px}
+  h2{font-size:17.5px;line-height:1.4}
+  section{margin-top:30px}
+  .sec-head{padding-bottom:8px;margin-bottom:16px}
+  .body{padding:15px 15px 17px}
+  .card{margin-bottom:18px;border-radius:14px}
+  table{font-size:12.6px}
+  th{white-space:normal}
+  th,td{padding:7px 8px}
+  .photos.p3{grid-template-columns:repeat(2,1fr)}
+  .photos.p3 a:nth-child(3){display:block}
+  .timeline{grid-template-columns:repeat(2,1fr)}
+  .lede,.sub{font-size:13.6px}
+}
+@media(max-width:400px){
+  .wrap{padding:16px 11px 84px}
+  h1{font-size:20px}
+  table{font-size:12px}
+  th,td{padding:6px 6px}
+}
+</style>
+<meta name="robots" content="noindex,nofollow,noarchive">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="apple-mobile-web-app-title" content="千岛湖看点">
+<meta name="theme-color" content="#FBF6EF">
+<meta name="format-detection" content="telephone=no">
+</head>
+<body>
+<div class="wrap">
+
+<h1>被我从行程里砍掉的那几个点<br>到底值不值得去</h1>
+<p class="sub">千岛湖 · 芹川古村 / 啤酒小镇 / 红叶湾 / 室内那几个 · 图来自公开图库，供你判断</p>
+
+<div class="note blue">
+  <span class="t">先说清楚：为什么上一版把它们砍了</span>
+  <p>上一版是 <b>3 天 2 晚 + 第三天绕义乌</b>，千岛湖只剩 1 个完整游玩日。那个约束下，砍掉它们是对的。</p>
+  <p>但如果你的行程能松一点（比如多住一晚、或者放弃义乌），<b>下面这两个是最值的</b>：<b>芹川古村</b>和<b>啤酒小镇</b>。另外三个（红叶湾、彩虹校舍、隧道艺术馆）是"顺手才去"级别，我不建议专程。</p>
+  <p>还有个必须更正的事：我上一轮把<b>千岛湖自然博物馆</b>当成雨天兜底推荐了，这次查到它<b>可能处于暂停营业状态</b>——这条放在下面第 5 张卡里说清楚。</p>
+</div>
+
+<!-- 1 芹川 -->
+<section>
+  <div class="sec-head">
+    <h2>① 芹川古村</h2>
+    <p class="lede">这一条是全场最被低估的。它不是"景点"，是一个还在住人的 750 年村子。</p>
+  </div>
+
+  <div class="card">
+    <div class="photos p3">
+      <a href="https://ts1.tc.mm.bing.net/th/id/R-C.5afd080c81a2c6bb7f2d1babb279c98a?rik=Kncfpt2CRFJ05w&riu=http%3a%2f%2fn.sinaimg.cn%2fsinacn10109%2f217%2fw640h377%2f20191219%2f5382-ikvenfu2473179.jpg&ehk=Q7qqd3nRSUnCeDlm1vSMNbt9%2f%2fRlAEOH%2f%2b0t7VPjWAA%3d&risl=&pid=ImgRaw&r=0" target="_blank"><img referrerpolicy="no-referrer" loading="lazy" src="https://ts1.tc.mm.bing.net/th/id/R-C.5afd080c81a2c6bb7f2d1babb279c98a?rik=Kncfpt2CRFJ05w&riu=http%3a%2f%2fn.sinaimg.cn%2fsinacn10109%2f217%2fw640h377%2f20191219%2f5382-ikvenfu2473179.jpg&ehk=Q7qqd3nRSUnCeDlm1vSMNbt9%2f%2fRlAEOH%2f%2b0t7VPjWAA%3d&risl=&pid=ImgRaw&r=0" alt="芹川古村 石拱桥"></a>
+      <a href="https://ts1.tc.mm.bing.net/th/id/R-C.1411b2a094e3d794193da88f0eafebf3?rik=IoERL3h%2fqgXjUA&riu=http%3a%2f%2fp2.qhimgs4.com%2ft017193bf53a884b726.jpg&ehk=WUcGVi3abu8vXQLceR4KzmSW8GeY%2bgeSSSIoVSOYMyU%3d&risl=&pid=ImgRaw&r=0" target="_blank"><img referrerpolicy="no-referrer" loading="lazy" src="https://ts1.tc.mm.bing.net/th/id/R-C.1411b2a094e3d794193da88f0eafebf3?rik=IoERL3h%2fqgXjUA&riu=http%3a%2f%2fp2.qhimgs4.com%2ft017193bf53a884b726.jpg&ehk=WUcGVi3abu8vXQLceR4KzmSW8GeY%2bgeSSSIoVSOYMyU%3d&risl=&pid=ImgRaw&r=0" alt="芹川古村 白墙黛瓦与溪水"></a>
+      <a href="https://ts1.tc.mm.bing.net/th/id/R-C.455b66b64f5e4c4c91491f4804655ce7?rik=HW72aarua7CRRQ&riu=http%3a%2f%2fn.sinaimg.cn%2fsinacn10109%2f151%2fw596h355%2f20191219%2f76d4-ikvenfu2473135.jpg&ehk=86XREbZH57%2fg3%2fxT%2b06TQBVHRY1WdGocSUaiOVbWIyg%3d&risl=&pid=ImgRaw&r=0" target="_blank"><img referrerpolicy="no-referrer" loading="lazy" src="https://ts1.tc.mm.bing.net/th/id/R-C.455b66b64f5e4c4c91491f4804655ce7?rik=HW72aarua7CRRQ&riu=http%3a%2f%2fn.sinaimg.cn%2fsinacn10109%2f151%2fw596h355%2f20191219%2f76d4-ikvenfu2473135.jpg&ehk=86XREbZH57%2fg3%2fxT%2b06TQBVHRY1WdGocSUaiOVbWIyg%3d&risl=&pid=ImgRaw&r=0" alt="芹川古村 俯瞰"></a>
+    </div>
+    <div class="body">
+      <span class="rank a">最值得跑一趟 · 半天</span>
+      <h2>芹川古村</h2>
+      <div class="hook">当年修千岛湖，老淳安、遂安两座县城沉进了水底——芹川因为地势高，整个村子躲过了这一劫。所以这里是<b>真·明清老宅</b>，不是仿的。</div>
+      <div class="tags">
+        <span>🚗 距千岛湖镇约 1 小时（山路弯多）</span>
+        <span>🎫 免费 · 全天开放</span>
+        <span>⏱ 半天足够</span>
+        <span>📅 11 月下旬正合适</span>
+      </div>
+
+      <div class="sect">孩子在这里会疯掉的点</div>
+      <ul>
+        <li><b>溪里上万尾锦鲤</b>：鱼食 2–3 元一包，8 岁和 10 岁都能站着喂半小时——这是全村的"儿童放电区"</li>
+        <li><b>30 多座古桥</b>：S 形溪水穿村 1600 米，走几步就是一座。数桥本身就是个游戏</li>
+        <li><b>村口 5 棵古樟</b>，最大那棵 800 岁，树底下凉快，是歇脚点也是第一张封面照</li>
+        <li><b>后山步道爬 10 分钟</b>：俯瞰全村"王"字形布局 + 群山围合，比在村里平拍更有大局感</li>
+        <li><b>进门廊桥、际云桥</b>：清代木廊桥和明崇祯年的石拱桥，桥上还有"农业学大寨"的旧字迹</li>
+      </ul>
+
+      <div class="quote">"阿婆溪边捶衣、阿公樟树下编竹篮、鸭子在桥下游，这种画面才是它值钱的地方。"<span class="from">—— 携程攻略《穿越 700 年的水墨梦境》</span></div>
+
+      <div class="warn"><b>⚠️ 两件要注意的：</b>① <b>农家乐点菜前先问价</b>，鱼头是按斤算的，不问清楚结账容易懵。② 千岛湖镇→芹川约 1 小时，<b>临水弯道和山路都多</b>，出发前 30 分钟给孩子吃晕车药。</div>
+
+      <div class="ok"><b>✅ 我的建议：</b>半天足够，值得专程。<b>如果住一晚，清晨 7–9 点是全片最好看的时段</b>——薄雾漂在溪面上，炊烟从马头墙缝里钻出来。正午光线太硬，反而普通。</div>
+    </div>
+  </div>
+</section>
+
+<!-- 2 啤酒小镇 -->
+<section>
+  <div class="sec-head">
+    <h2>② 千岛湖啤酒小镇</h2>
+    <p class="lede">入场免费，却是这一批里最出片的地方——而且它就在镇上，顺路。</p>
+  </div>
+
+  <div class="card">
+    <div class="photos p3">
+      <a href="https://ts1.tc.mm.bing.net/th/id/R-C.44e25f36e7708194c30c2147d68eea90?rik=ZKRJIbeblwE6WQ&riu=http%3a%2f%2fepaper.gytoday.cn%2fresfile%2f2018-07-23%2f04%2fp6_s.jpg&ehk=qKaOpgDjB6cN3347rPqGpf6rWd%2b4btrwRcrhKzwuBgs%3d&risl=&pid=ImgRaw&r=0" target="_blank"><img referrerpolicy="no-referrer" loading="lazy" src="https://ts1.tc.mm.bing.net/th/id/R-C.44e25f36e7708194c30c2147d68eea90?rik=ZKRJIbeblwE6WQ&riu=http%3a%2f%2fepaper.gytoday.cn%2fresfile%2f2018-07-23%2f04%2fp6_s.jpg&ehk=qKaOpgDjB6cN3347rPqGpf6rWd%2b4btrwRcrhKzwuBgs%3d&risl=&pid=ImgRaw&r=0" alt="啤酒小镇 欧式街区"></a>
+      <a href="https://ts1.tc.mm.bing.net/th/id/R-C.43dcb3b7a74accf46f687ad7d89555d8?rik=4RykfGWtJlSo3Q&riu=http%3a%2f%2fvip-public.people.com.cn%2fphoto%2f2024%2f5%2f16%2fe77d1f1a9dae4ac99526a6f1f9a370abhyRY_m.jpg&ehk=9UjamdfBXANk%2fCPgSW1JOTHHGCLwYKTCt%2f%2b7DaVQoic%3d&risl=&pid=ImgRaw&r=0" target="_blank"><img referrerpolicy="no-referrer" loading="lazy" src="https://ts1.tc.mm.bing.net/th/id/R-C.43dcb3b7a74accf46f687ad7d89555d8?rik=4RykfGWtJlSo3Q&riu=http%3a%2f%2fvip-public.people.com.cn%2fphoto%2f2024%2f5%2f16%2fe77d1f1a9dae4ac99526a6f1f9a370abhyRY_m.jpg&ehk=9UjamdfBXANk%2fCPgSW1JOTHHGCLwYKTCt%2f%2b7DaVQoic%3d&risl=&pid=ImgRaw&r=0" alt="啤酒小镇 白灯塔日落栈道"></a>
+      <a href="https://ts1.tc.mm.bing.net/th/id/R-C.c10017403f91a20b12cab05b5cddf7af?rik=0XZj3UMIYg1rzw&riu=http%3a%2f%2fvip-public.people.com.cn%2fphoto%2f2023%2f7%2f16%2f545787d0d993437ca824b70dddd4951aah9M_m.jpg&ehk=UXBg5u%2fxfBizOuFssUCmqmAvf%2bTlIoysEyvsTPB6VXU%3d&risl=&pid=ImgRaw&r=0" target="_blank"><img referrerpolicy="no-referrer" loading="lazy" src="https://ts1.tc.mm.bing.net/th/id/R-C.c10017403f91a20b12cab05b5cddf7af?rik=0XZj3UMIYg1rzw&riu=http%3a%2f%2fvip-public.people.com.cn%2fphoto%2f2023%2f7%2f16%2f545787d0d993437ca824b70dddd4951aah9M_m.jpg&ehk=UXBg5u%2fxfBizOuFssUCmqmAvf%2bTlIoysEyvsTPB6VXU%3d&risl=&pid=ImgRaw&r=0" alt="啤酒小镇 灯塔与皮划艇"></a>
+    </div>
+    <div class="body">
+      <span class="rank a">最值得顺路 · 半天</span>
+      <h2>千岛湖啤酒小镇</h2>
+      <div class="hook">彩色欧式街区 + 一座纯白灯塔。门票 <b>0 元</b>，停车也免费，项目按需单独买。</div>
+      <div class="tags">
+        <span>🚗 城区打车约 15 分钟 · 自驾有免费地下停车场</span>
+        <span>🎫 入园免费 · 项目单收</span>
+        <span>⏱ 2–3 小时</span>
+        <span>📅 最佳 15:00–19:00（蹲晚霞）</span>
+      </div>
+
+      <div class="sect">孩子在这里会疯掉的点</div>
+      <ul>
+        <li><b>环湖卡丁车</b>：<b>儿童票 ¥80</b>、成人 ¥150，有<b>亲子双人车</b>——一边飙一边看湖，这是全小镇的爆款</li>
+        <li><b>天迹热气球</b>：¥180/人，亲子 1 大 1 小 ¥330，高空俯瞰千岛湖（<b>大风停飞</b>）</li>
+        <li><b>纯白灯塔 + S 形栈道</b>：最出圈的机位，晴天清新、傍晚橘子海，逆光剪影很温柔</li>
+        <li><b>千秋乐园</b>：¥19 起，10 项通票 ¥88，还有海盗船 ¥56</li>
+        <li><b>欧式童话街区</b>：巨型啤酒桶雕塑、复古电话亭、旋转楼梯、马赛克墙——零废片机位</li>
+        <li><b>啤酒博物院</b>：约 ¥79（优待 ¥60 / 家庭 2 大 1 小 ¥210），能看酿造线、<b>试喝鲜啤果啤、DIY 专属酒瓶</b></li>
+      </ul>
+
+      <div class="quote">"一进门直接闯入马卡龙童话世界。彩色欧式小楼、复古电话亭、巨型啤酒桶雕塑……每个角落都精心布景，零废片机位超多。"<span class="from">—— 携程攻略《千岛湖必打卡童话小镇》</span></div>
+
+      <div class="warn"><b>⚠️ 三个提醒：</b>① 小镇 24 小时开放，<b>亮灯 18:00–22:00</b>，想看夜景就傍晚去。② 湖边栈道有青苔、<b>湿滑</b>。③ 这里主打鲜啤，<b>开车不喝酒</b>——你是自驾来的。</div>
+
+      <div class="ok"><b>✅ 我的建议：</b>这条<b>可以直接替掉 D1 傍晚的天屿山</b>——同在镇上、免费、孩子有卡丁车、大人有灯塔日落，还能顺便吃饭。两个都想要的话：D1 去天屿山看日落，D3 早上出发前顺路 20 分钟拍个灯塔。</div>
+    </div>
+  </div>
+</section>
+
+<!-- 3 红叶湾 -->
+<section>
+  <div class="sec-head">
+    <h2>③ 红叶湾</h2>
+    <p class="lede">季节限定，窗口很短。但这里有个评分上的大坑，我必须先说清楚。</p>
+  </div>
+
+  <div class="card">
+    <div class="photos p3">
+      <a href="https://ts1.tc.mm.bing.net/th/id/R-C.7e04468ea4e7677bddeba643e0009c98?rik=xijb3Fn3I0aKXA&riu=http%3a%2f%2fwww.qdhnews.com.cn%2fnews%2fpic%2f2019-11%2f12%2f17c29106-7b7b-4fc5-a953-d352da56cd14.jpg&ehk=nuHkvWJ20xxi70L8CwJCAkigViGCNUbYHtYfNRCMC%2bw%3d&risl=&pid=ImgRaw&r=0" target="_blank"><img referrerpolicy="no-referrer" loading="lazy" src="https://ts1.tc.mm.bing.net/th/id/R-C.7e04468ea4e7677bddeba643e0009c98?rik=xijb3Fn3I0aKXA&riu=http%3a%2f%2fwww.qdhnews.com.cn%2fnews%2fpic%2f2019-11%2f12%2f17c29106-7b7b-4fc5-a953-d352da56cd14.jpg&ehk=nuHkvWJ20xxi70L8CwJCAkigViGCNUbYHtYfNRCMC%2bw%3d&risl=&pid=ImgRaw&r=0" alt="红叶湾 V形水湾秋色"></a>
+      <a href="https://ts1.tc.mm.bing.net/th/id/R-C.bb61ad3e4a9a42cc105c3351c5c2f334?rik=HUHWtO4cXrDg%2fw&riu=http%3a%2f%2fvip-public.people.com.cn%2fphoto%2f2023%2f11%2f19%2fef88c3ea27c549e5a6e3c2bb2dae8dabAgfc_m.jpg&ehk=Egtzl%2bvc0tw%2ba8ckPiiTowOYlag2VUSf8Hft%2f344rI4%3d&risl=&pid=ImgRaw&r=0" target="_blank"><img referrerpolicy="no-referrer" loading="lazy" src="https://ts1.tc.mm.bing.net/th/id/R-C.bb61ad3e4a9a42cc105c3351c5c2f334?rik=HUHWtO4cXrDg%2fw&riu=http%3a%2f%2fvip-public.people.com.cn%2fphoto%2f2023%2f11%2f19%2fef88c3ea27c549e5a6e3c2bb2dae8dabAgfc_m.jpg&ehk=Egtzl%2bvc0tw%2ba8ckPiiTowOYlag2VUSf8Hft%2f344rI4%3d&risl=&pid=ImgRaw&r=0" alt="红叶湾 爱心岛航拍"></a>
+      <a href="https://ts1.tc.mm.bing.net/th/id/R-C.089ce6de090ed2e2d674515bf470ff44?rik=NoLeAhlbnlL03g&riu=http%3a%2f%2fwww.qdhnews.com.cn%2fnews%2fpic%2f2019-11%2f12%2ff9222ce7-83d9-434c-9237-05f061db732f.jpg&ehk=laQYb9YrG2Jg0bVopT313i92LNl2YS%2ft1ntmxQFb%2fxM%3d&risl=&pid=ImgRaw&r=0" target="_blank"><img referrerpolicy="no-referrer" loading="lazy" src="https://ts1.tc.mm.bing.net/th/id/R-C.089ce6de090ed2e2d674515bf470ff44?rik=NoLeAhlbnlL03g&riu=http%3a%2f%2fwww.qdhnews.com.cn%2fnews%2fpic%2f2019-11%2f12%2ff9222ce7-83d9-434c-9237-05f061db732f.jpg&ehk=laQYb9YrG2Jg0bVopT313i92LNl2YS%2ft1ntmxQFb%2fxM%3d&risl=&pid=ImgRaw&r=0" alt="红叶湾 红叶与湖面倒影"></a>
+    </div>
+    <div class="body">
+      <span class="rank">季节限定 · 30–40 分钟</span>
+      <h2>红叶湾</h2>
+      <div class="hook">3.5 公里的曲折水湾，岛屿被红橙黄裹满，还有一座被外交官点赞过的<b>"爱心岛"</b>——航拍看就是一颗嵌在湖里的红心。</div>
+      <div class="tags">
+        <span>🚗 距千岛湖镇 15 km / 25 分钟</span>
+        <span>🎫 观景台免费 · 有免费车位</span>
+        <span>⏱ 30–40 分钟（观景台）</span>
+        <span>📅 11 月中下旬–12 月初</span>
+      </div>
+
+      <div class="sect">看什么</div>
+      <ul>
+        <li><b>山顶观景台</b>：俯瞰整个 V 字形水湾，"水上迷宫"的招牌机位，导航搜「红叶湾观景台」</li>
+        <li><b>爱心岛</b>：红叶环绕的小岛，形状像一颗心，是这片秋色的顶流</li>
+        <li><b>森林步道 + 湖边栈桥</b>：拍红叶特写和湖水倒影，出片率很高</li>
+        <li><b>皮划艇 ¥60 起</b>：双人艇、配救生衣、不限时，船桨划开水面，红叶倒影跟着晃</li>
+        <li><b>云舟驿直升机</b> ¥198/人，航程约 3 分钟（2–70 岁、体重 ≤100 kg），部分票含一次皮划艇</li>
+      </ul>
+
+      <div class="quote">"3.5 公里的曲折水湾里，形状各异的岛屿被红、橙、黄三色树叶裹满，碧绿的湖水倒映着五彩山林。"<span class="from">—— 今日头条，2025-11-11 淳安本地人实地拍摄</span></div>
+
+      <div class="warn"><b>⚠️ 这里有个评分大坑，必须点破：</b>携程上「红叶湾景点」评分<b>只有 2.3</b>。但同一条湾里，<b>红叶湾水上乐园 4.8、划艇俱乐部 4.2、观景台免费</b>。<b>2.3 是"把它当成收费景点评价"的产物，不是景色差</b>——观景台本来就不收钱，你去看的是风景，不是服务。<br>另一件事：<b>红叶湾在镇北的千汾线上，和第三天去义乌的西南方向相反</b>，只有 D1 上午 11 点前就到镇才顺路。</div>
+
+      <div class="ok"><b>✅ 我的建议：</b><b>只去观景台，30–40 分钟，不买套票。</b>水上乐园的"13 项一票通 ¥260"在 11 月底没必要——那时候室外水上项目开不开、水温扛不扛得住都要另说。<b>它是加分项，不是必需项。</b></div>
+    </div>
+  </div>
+</section>
+
+<!-- 4 室内那几个 -->
+<section>
+  <div class="sec-head">
+    <h2>④ 室内这几个（"三个博物馆"的真相）</h2>
+    <p class="lede">你问的"三个博物馆"，其实一个是博物馆、一个是自然馆、还有一个是小学。我按实际情况重新排了。</p>
+  </div>
+
+  <div class="card">
+    <div class="photos p3">
+      <a href="https://ts1.tc.mm.bing.net/th/id/R-C.7439943a9da47e52a5f53c67dcd329e3?rik=bRkoNiSWvBUjqQ&riu=http%3a%2f%2f5b0988e595225.cdn.sohucs.com%2fimages%2f20180118%2f3139b23edcad422b83cfb61d2b17eaa4.jpeg&ehk=%2bVN8XEqLcx7WXrWXZ9KoZvHqXtm%2bWoVrKtzH1xcXf10%3d&risl=&pid=ImgRaw&r=0" target="_blank"><img referrerpolicy="no-referrer" loading="lazy" src="https://ts1.tc.mm.bing.net/th/id/R-C.7439943a9da47e52a5f53c67dcd329e3?rik=bRkoNiSWvBUjqQ&riu=http%3a%2f%2f5b0988e595225.cdn.sohucs.com%2fimages%2f20180118%2f3139b23edcad422b83cfb61d2b17eaa4.jpeg&ehk=%2bVN8XEqLcx7WXrWXZ9KoZvHqXtm%2bWoVrKtzH1xcXf10%3d&risl=&pid=ImgRaw&r=0" alt="淳安博物馆 大厅"></a>
+      <a href="https://ts1.tc.mm.bing.net/th/id/R-C.31d4db7059ba9c21587bfaddfbefe3c8?rik=ZUl0S9NPz8uw8A&riu=http%3a%2f%2f5b0988e595225.cdn.sohucs.com%2fimages%2f20180118%2feafd1a80b7e2414ba1e3defe915d43ec.jpeg&ehk=%2bZ6%2bDsV3CGxn1ot7fJ1slJktxsAgnquFtzFKiNmBS90%3d&risl=&pid=ImgRaw&r=0" target="_blank"><img referrerpolicy="no-referrer" loading="lazy" src="https://ts1.tc.mm.bing.net/th/id/R-C.31d4db7059ba9c21587bfaddfbefe3c8?rik=ZUl0S9NPz8uw8A&riu=http%3a%2f%2f5b0988e595225.cdn.sohucs.com%2fimages%2f20180118%2feafd1a80b7e2414ba1e3defe915d43ec.jpeg&ehk=%2bZ6%2bDsV3CGxn1ot7fJ1slJktxsAgnquFtzFKiNmBS90%3d&risl=&pid=ImgRaw&r=0" alt="淳安博物馆 沉浸式展厅"></a>
+      <a href="https://ts1.tc.mm.bing.net/th/id/R-C.22c1da7286845da5755ad0229c458071?rik=YwYjA3AR0g%2fdYg&riu=http%3a%2f%2f5b0988e595225.cdn.sohucs.com%2fimages%2f20180118%2fff099f7279ef4de78ca369c486e75b1c.jpeg&ehk=fa705dExoiap5CmIDk5MXX9tUMvjdKhVxws8QBdL3A4%3d&risl=&pid=ImgRaw&r=0" target="_blank"><img referrerpolicy="no-referrer" loading="lazy" src="https://ts1.tc.mm.bing.net/th/id/R-C.22c1da7286845da5755ad0229c458071?rik=YwYjA3AR0g%2fdYg&riu=http%3a%2f%2f5b0988e595225.cdn.sohucs.com%2fimages%2f20180118%2fff099f7279ef4de78ca369c486e75b1c.jpeg&ehk=fa705dExoiap5CmIDk5MXX9tUMvjdKhVxws8QBdL3A4%3d&risl=&pid=ImgRaw&r=0" alt="淳安博物馆 历史场景"></a>
+    </div>
+    <div class="body">
+      <span class="rank b">雨天第一顺位 · 1.5–2 小时</span>
+      <h2>淳安博物馆</h2>
+      <div class="hook">全免费、4.9 分，讲的是"水下那两座千年县城"——千岛湖底下埋着狮城和贺城。</div>
+      <div class="tags">
+        <span>📍 青溪新城珍珠大道珍珠一路 113 号</span>
+        <span>🎫 免费</span>
+        <span>⏱ 1.5–2 小时</span>
+        <span>📅 日场 9:00–16:30 · <b>周一闭馆</b></span>
+      </div>
+      <ul>
+        <li>千岛湖的形成史 + <b>30 万移民</b>的故事，这部分大人比孩子看得进去</li>
+        <li>展厅做得比预期好：沉浸式大屏、水景大厅、历史场景复原</li>
+        <li>和自然博物馆比，<b>信息密度更高、也更"真"</b></li>
+      </ul>
+      <div class="warn"><b>⚠️</b> <b>周一闭馆</b>；<b>16:30 就停止入场</b>，比一般馆早，别下午四点才去。</div>
+      <div class="ok"><b>✅</b> 四个室内里，<b>这是唯一我建议"必去"的</b>，雨天更是第一选择。</div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="photos p2">
+      <a href="https://ts1.tc.mm.bing.net/th/id/R-C.00880bbb78a24b7952d29e58c50c3180?rik=kCCya6uDt1XU0g&riu=http%3a%2f%2fzjnews.zjol.com.cn%2fzjnews%2fhznews%2f201810%2fW020181016178565355722.jpg&ehk=AbAcceJD6XDc%2f%2b4cTPyLGimMkmHU3%2brI%2fNiSF4QRl0I%3d&risl=&pid=ImgRaw&r=0" target="_blank"><img referrerpolicy="no-referrer" loading="lazy" src="https://ts1.tc.mm.bing.net/th/id/R-C.00880bbb78a24b7952d29e58c50c3180?rik=kCCya6uDt1XU0g&riu=http%3a%2f%2fzjnews.zjol.com.cn%2fzjnews%2fhznews%2f201810%2fW020181016178565355722.jpg&ehk=AbAcceJD6XDc%2f%2b4cTPyLGimMkmHU3%2brI%2fNiSF4QRl0I%3d&risl=&pid=ImgRaw&r=0" alt="富文乡中心小学 彩虹校舍全景"></a>
+      <a href="https://ts1.tc.mm.bing.net/th/id/R-C.6f1dc475c8ceebb5fe0bbd12e7c5da50?rik=0riG9Nr%2bMqHuIw&riu=http%3a%2f%2fvip-public.people.com.cn%2fphoto%2f2024%2f3%2f14%2f8592f4cab8a8443ba9774d004b008d4dP7VN_m.jpg&ehk=Qyd%2foopFWgEe7eRkcA%2bkjAaII4Ng4XAGwc27RgI5jMM%3d&risl=&pid=ImgRaw&r=0" target="_blank"><img referrerpolicy="no-referrer" loading="lazy" src="https://ts1.tc.mm.bing.net/th/id/R-C.6f1dc475c8ceebb5fe0bbd12e7c5da50?rik=0riG9Nr%2bMqHuIw&riu=http%3a%2f%2fvip-public.people.com.cn%2fphoto%2f2024%2f3%2f14%2f8592f4cab8a8443ba9774d004b008d4dP7VN_m.jpg&ehk=Qyd%2foopFWgEe7eRkcA%2bkjAaII4Ng4XAGwc27RgI5jMM%3d&risl=&pid=ImgRaw&r=0" alt="富文乡中心小学 校舍与操场"></a>
+    </div>
+    <div class="body">
+      <span class="rank c">顺路看一眼 · 30 分钟</span>
+      <h2>富文乡中心小学（彩虹校舍）</h2>
+      <div class="hook">一座 26 色的"彩虹屋"小学，《我和我的家乡》取景地。免费的，但它<b>不是景点，是学校</b>。</div>
+      <div class="tags">
+        <span>🎫 免费</span>
+        <span>⏱ 30–45 分钟</span>
+        <span>📍 富文乡，在环湖线上</span>
+      </div>
+      <div class="warn"><b>⚠️ 这是正在使用的学校。</b>只在不影响教学的前提下、最好是周末或假期去看，门口拍拍照就好，<b>不要当成游乐园带孩子冲进去</b>。带孩子去的话，正好可以聊聊"别人的学校长什么样"。</div>
+      <div class="ok"><b>✅</b> 路过值得停 30 分钟；<b>专程跑一趟不值</b>。</div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="photos p2">
+      <a href="https://ts1.tc.mm.bing.net/th/id/R-C.f53b04f7c704b030e0ff6ddf4fe2fe0d?rik=0Rj6A8BkTGGVYw&riu=http%3a%2f%2fvip-public.people.com.cn%2fphoto%2f2024%2f9%2f21%2f427bfbf00672448ea1bbbfa8d2c09ef4f5c9_m.jpg&ehk=qM7i9vwdRHgMCdG8jMmxd0gL8ob%2fGBJoh9V7XAplsUc%3d&risl=&pid=ImgRaw&r=0" target="_blank"><img referrerpolicy="no-referrer" loading="lazy" src="https://ts1.tc.mm.bing.net/th/id/R-C.f53b04f7c704b030e0ff6ddf4fe2fe0d?rik=0Rj6A8BkTGGVYw&riu=http%3a%2f%2fvip-public.people.com.cn%2fphoto%2f2024%2f9%2f21%2f427bfbf00672448ea1bbbfa8d2c09ef4f5c9_m.jpg&ehk=qM7i9vwdRHgMCdG8jMmxd0gL8ob%2fGBJoh9V7XAplsUc%3d&risl=&pid=ImgRaw&r=0" alt="千岛湖隧道艺术馆 千里江山图壁画"></a>
+      <a href="https://ts1.tc.mm.bing.net/th/id/R-C.3c6d43b36c6cff5342362fb8629cd429?rik=Eedzxi0SQrdAAA&riu=http%3a%2f%2fimg.qianggen.net%2fuploadfile%2f2022%2f0731%2f20220731091829193.jpg&ehk=tjqg6bmjuVREklR5yATXDrGftDPL4nviCytx9gFMApo%3d&risl=&pid=ImgRaw&r=0" target="_blank"><img referrerpolicy="no-referrer" loading="lazy" src="https://ts1.tc.mm.bing.net/th/id/R-C.3c6d43b36c6cff5342362fb8629cd429?rik=Eedzxi0SQrdAAA&riu=http%3a%2f%2fimg.qianggen.net%2fuploadfile%2f2022%2f0731%2f20220731091829193.jpg&ehk=tjqg6bmjuVREklR5yATXDrGftDPL4nviCytx9gFMApo%3d&risl=&pid=ImgRaw&r=0" alt="千岛湖隧道艺术馆 星空壁画"></a>
+    </div>
+    <div class="body">
+      <span class="rank c">自驾环湖顺手进 · 20 分钟</span>
+      <h2>千岛湖隧道艺术馆 <span style="font-size:12px;font-weight:400;color:#8C8880">（这轮新发现的）</span></h2>
+      <div class="hook">三个废弃的公路隧道改成的免费艺术馆，里面是感应灯光 + 《千里江山图》壁画。</div>
+      <div class="tags">
+        <span>🎫 免费 · 24 小时</span>
+        <span>⏱ 20–30 分钟</span>
+        <span>📍 淳杨线沿线</span>
+      </div>
+      <div class="ok"><b>✅</b> 位置在淳杨线上——也就是<b>自驾环湖那条路</b>。你如果放弃环湖改走别的路线，它就不顺路了，<b>不用专程去</b>。</div>
+    </div>
+  </div>
+
+  <div class="note red">
+    <span class="t">⚠️ 更正：千岛湖自然博物馆，先别急着去</span>
+    <p>我上一轮把它列成"雨天兜底"，这次逐平台核对发现两个问题：</p>
+    <p><b>① 携程评分只有 3.5 分</b>，是这几个里最低的。<br>
+    <b>② 同程上它的状态显示为「暂停营业，具体营业时间待景区通知」。</b></p>
+    <p>所以<b>去之前一定先打电话或看官方公告确认是否开放</b>。要室内兜底，<b>优先淳安博物馆（免费、4.9 分）</b>，别把希望押在自然博物馆上。它宣传里的恐龙化石、中华龙鸟如果能看，是加分的；但按现在的状态，不能当成计划内的点。</p>
+  </div>
+</section>
+
+<!-- 5 骑龙巷 -->
+<section>
+  <div class="sec-head">
+    <h2>⑤ 顺带提一个：骑龙巷</h2>
+    <p class="lede">没配图，因为它不需要图——它就是条吃街。</p>
+  </div>
+  <div class="block">
+    <p>千岛湖版"小重庆"，<b>122 级台阶两侧全是小吃摊</b>，<b>人均 30 元吃到饱</b>：艾草米粿 3 元一个、梅干菜饼、安上粉皮糯叽叽配辣酱。免费。</p>
+    <p><b>✅ 定位：</b>晚上没安排的时候来，蹲在路边吃、看本地人遛狗。这就是那种"不刻意但很舒服"的一小时。</p>
+  </div>
+</section>
+
+<!-- 6 决策表 -->
+<section>
+  <div class="sec-head">
+    <h2>30 秒决策表</h2>
+  </div>
+  <div class="tbl-wrap">
+  <div class="tw"><table>
+    <thead>
+      <tr><th>你的诉求</th><th>去哪儿</th><th>花多久</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>就想看真古董、拍水墨大片</td><td><b>芹川古村</b></td><td>半天</td></tr>
+      <tr><td>拍照 + 孩子有玩的 + 不想花钱</td><td><b>啤酒小镇</b></td><td>2–3 小时</td></tr>
+      <tr><td>想拍秋天、只想走 30 分钟</td><td><b>红叶湾观景台</b></td><td>30–40 分钟</td></tr>
+      <tr><td>下雨 / 想吹空调涨知识</td><td><b>淳安博物馆</b></td><td>1.5–2 小时</td></tr>
+      <tr><td>孩子在车上待不住、要吃饭</td><td><b>骑龙巷</b></td><td>1 小时</td></tr>
+      <tr><td>自驾环湖路过</td><td>隧道艺术馆 / 彩虹校舍</td><td>20–30 分钟</td></tr>
+    </tbody>
+  </table></div>
+  </div>
+</section>
+
+<!-- 7 不建议 -->
+<section>
+  <div class="sec-head">
+    <h2>不建议清单</h2>
+    <p class="lede">把丑话也说在前面，比只堆好话有用。</p>
+  </div>
+  <div class="block">
+    <ul>
+      <li><b>不建议把芹川古村和红叶湾排在同一天。</b>一个在西北、一个在镇北，方向不同，来回白跑。</li>
+      <li><b>不建议专程跑富文乡中心小学。</b>30 分钟的事，专程去不值，顺路才去。</li>
+      <li><b>不建议买红叶湾"13 项一票通 ¥260"。</b>11 月底室外水上项目开不开都两说，只买观景台（免费）就够。</li>
+      <li><b>不建议现在就去千岛湖自然博物馆。</b>暂停营业状态未明，先确认。</li>
+      <li><b>不建议为了这几个点把行程排满。</b>千岛湖最值钱的还是"湖边待着"——这些是加餐，不是主食。</li>
+    </ul>
+  </div>
+</section>
+
+<div class="foot">
+  <p><b>信息来源</b>：点评与票价取自携程 / 同程 / 美团公开页面；真实体感与避坑取自携程攻略、今日头条本地实地（2025-11-11）、去哪儿 UGC、小红书类攻略聚合；官方口径取自淳安发布、千岛湖新闻网、人民图片、浙江新闻。</p>
+  <p><b>图片说明</b>：全部为公开图库（必应图库 / 人民图片 / 千岛湖新闻网 / 浙江新闻等）缩略图，仅作示意。点击可放大到原图页。图片可能随时间失效，若某张打不开属正常。</p>
+  <p><b>价格与时间</b>：为查询日（2026-09-27）公开口径，实际以现场与官方最新公告为准。红叶湾的开放项目、自然博物馆的营业状态、啤酒小镇各项目的运营时间，出发前建议各打一个电话确认。</p>
+  <p><b>来源交叉</b>：红叶湾「携程 2.3 分」与其他三个同类主体的 4.2–4.8 分形成明显背离，本页按"口径不同"解释，不代表景色评价，请以实拍图自行判断。</p>
+</div>
+
+</div>
+</body>
+</html>
